@@ -1,1150 +1,985 @@
-# Configuration file for ipython-notebook.
-
-c = get_config()
-
-# ------------------------------------------------------------------------------
-# NotebookApp configuration
-# ------------------------------------------------------------------------------
-# c.LatexConfig.latex_command = 'pdftex'
-
-# NotebookApp will inherit config from: BaseIPythonApplication, Application
-
-# The url for MathJax.js.
-# c.NotebookApp.mathjax_url = ''
-
-# Supply extra arguments that will be passed to Jinja environment.
-# c.NotebookApp.jinja_environment_options = {}
-
-# The IP address the notebook server will listen on.
-# c.NotebookApp.ip = 'localhost'
-
-# DEPRECATED use base_url
-# c.NotebookApp.base_project_url = '/'
-
-# Create a massive crash report when IPython encounters what may be an internal
-# error.  The default is to append a short message to the usual traceback
-# c.NotebookApp.verbose_crash = False
-
-# The random bytes used to secure cookies. By default this is a new random
-# number every time you start the Notebook. Set it to a value in a config file
-# to enable logins to persist across server sessions.
-#
-# Note: Cookie secrets should be kept private, do not share config files with
-# cookie_secret stored in plaintext (you can read the value from a file).
-# c.NotebookApp.cookie_secret = ''
-
-# The number of additional ports to try if the specified port is not available.
-# c.NotebookApp.port_retries = 50
-
-# Whether to open in a browser after starting. The specific browser used is
-# platform dependent and determined by the python standard library `webbrowser`
-# module, unless it is overridden using the --browser (NotebookApp.browser)
-# configuration option.
-# c.NotebookApp.open_browser = True
-
-# The notebook manager class to use.
-# c.NotebookApp.notebook_manager_class = 'notebook.services.notebooks.filenbmanager.FileNotebookManager'
-
-# The date format used by logging formatters for %(asctime)s
-# c.NotebookApp.log_datefmt = '%Y-%m-%d %H:%M:%S'
-
-# The port the notebook server will listen on.
-# c.NotebookApp.port = 8888
-
-# Whether to overwrite existing config files when copying
-# c.NotebookApp.overwrite = False
-
-# Whether to enable MathJax for typesetting math/TeX
-#
-# MathJax is the javascript library IPython uses to render math/LaTeX. It is
-# very large, so you may want to disable it if you have a slow internet
-# connection, or for offline use of the notebook.
-#
-# When disabled, equations etc. will appear as their untransformed TeX source.
-c.NotebookApp.enable_mathjax = True
-
-# The full path to an SSL/TLS certificate file.
-# c.NotebookApp.certfile = u''
-
-# The base URL for the notebook server.
-#
-# Leading and trailing slashes can be omitted, and will automatically be added.
-# c.NotebookApp.base_url = '/'
-
-# The directory to use for notebooks and kernels.
-# c.NotebookApp.notebook_dir = u'/root/.ipython/profile_default'
-
-#
-# c.NotebookApp.file_to_run = ''
-
-# The IPython profile to use.
-# c.NotebookApp.profile = u'default'
-
-# paths for Javascript extensions. By default, this is just
-# IPYTHONDIR/nbextensions
-# c.NotebookApp.nbextensions_path = []
-
-# The name of the IPython directory. This directory is used for logging
-# configuration (through profiles), history storage, etc. The default is usually
-# $HOME/.ipython. This options can also be specified through the environment
-# variable IPYTHONDIR.
-# c.NotebookApp.ipython_dir = u''
-
-# Set the log level by value or name.
-# c.NotebookApp.log_level = 30
-
-# Hashed password to use for web authentication.
-#
-# To generate, type in a python/IPython shell:
-#
-#   from IPython.lib import passwd; passwd()
-#
-# The string should be of the form type:salt:hashed-password.
-# c.NotebookApp.password = u''
-
-# The Logging format template
-# c.NotebookApp.log_format = '[%(name)s]%(highlevel)s %(message)s'
-
-# Path to an extra config file to load.
-#
-# If specified, load this config file in addition to any other IPython config.
-# c.NotebookApp.extra_config_file = u''
-
-# Extra paths to search for serving static files.
-#
-# This allows adding javascript/css to be available from the notebook server
-# machine, or overriding individual files in the IPython
-# c.NotebookApp.extra_static_paths = []
-
-# Whether to trust or not X-Scheme/X-Forwarded-Proto and X-Real-Ip/X-Forwarded-
-# For headerssent by the upstream reverse proxy. Necessary if the proxy handles
-# SSL
-# c.NotebookApp.trust_xheaders = False
-
-# Whether to install the default config files into the profile dir. If a new
-# profile is being created, and IPython contains config files for that profile,
-# then they will be staged into the new directory.  Otherwise, default config
-# files will be automatically generated.
-# c.NotebookApp.copy_config_files = False
-
-# The full path to a private key file for usage with SSL/TLS.
-# c.NotebookApp.keyfile = u''
-
-# Supply overrides for the tornado.web.Application that the IPython notebook
-# uses.
-# c.NotebookApp.webapp_settings = {}
-
-# Specify what command to use to invoke a web browser when opening the notebook.
-# If not specified, the default browser will be determined by the `webbrowser`
-# standard library module, which allows setting of the BROWSER environment
-# variable to override it.
-# c.NotebookApp.browser = u''
-
-# ------------------------------------------------------------------------------
-# IPKernelApp configuration
-# ------------------------------------------------------------------------------
-
-# IPython: an enhanced interactive Python shell.
-
-# IPKernelApp will inherit config from: BaseIPythonApplication, Application,
-# InteractiveShellApp
-
-# Run the file referenced by the PYTHONSTARTUP environment variable at IPython
-# startup.
-# c.IPKernelApp.exec_PYTHONSTARTUP = True
-
-# The importstring for the DisplayHook factory
-# c.IPKernelApp.displayhook_class = 'IPython.kernel.zmq.displayhook.ZMQDisplayHook'
-
-# Set the IP or interface on which the kernel will listen.
-# c.IPKernelApp.ip = u''
-
-# Pre-load matplotlib and numpy for interactive use, selecting a particular
-# matplotlib backend and loop integration.
-# c.IPKernelApp.pylab = None
-
-# Create a massive crash report when IPython encounters what may be an internal
-# error.  The default is to append a short message to the usual traceback
-# c.IPKernelApp.verbose_crash = False
-
-# The Kernel subclass to be used.
-#
-# This should allow easy re-use of the IPKernelApp entry point to configure and
-# launch kernels other than IPython's own.
-# c.IPKernelApp.kernel_class = 'IPython.kernel.zmq.ipkernel.Kernel'
-
-# Run the module as a script.
-# c.IPKernelApp.module_to_run = ''
-
-# The date format used by logging formatters for %(asctime)s
-# c.IPKernelApp.log_datefmt = '%Y-%m-%d %H:%M:%S'
-
-# set the shell (ROUTER) port [default: random]
-# c.IPKernelApp.shell_port = 0
-
-# set the control (ROUTER) port [default: random]
-# c.IPKernelApp.control_port = 0
-
-# Whether to overwrite existing config files when copying
-# c.IPKernelApp.overwrite = False
-
-# Execute the given command string.
-# c.IPKernelApp.code_to_run = ''
-
-# set the stdin (ROUTER) port [default: random]
-# c.IPKernelApp.stdin_port = 0
-
-# Set the log level by value or name.
-# c.IPKernelApp.log_level = 30
-
-# lines of code to run at IPython startup.
-# c.IPKernelApp.exec_lines = []
-
-# Path to an extra config file to load.
-#
-# If specified, load this config file in addition to any other IPython config.
-# c.IPKernelApp.extra_config_file = u''
-
-# The importstring for the OutStream factory
-# c.IPKernelApp.outstream_class = 'IPython.kernel.zmq.iostream.OutStream'
-
-# Whether to create profile dir if it doesn't exist
-# c.IPKernelApp.auto_create = False
-
-# set the heartbeat port [default: random]
-# c.IPKernelApp.hb_port = 0
-
-#
-# c.IPKernelApp.transport = 'tcp'
-
-# redirect stdout to the null device
-# c.IPKernelApp.no_stdout = False
-
-# Should variables loaded at startup (by startup files, exec_lines, etc.) be
-# hidden from tools like %who?
-# c.IPKernelApp.hide_initial_ns = True
-
-# dotted module name of an IPython extension to load.
-# c.IPKernelApp.extra_extension = ''
-
-# A file to be run
-# c.IPKernelApp.file_to_run = ''
-
-# The IPython profile to use.
-# c.IPKernelApp.profile = u'default'
-
-#
-# c.IPKernelApp.parent_appname = u''
-
-# kill this process if its parent dies.  On Windows, the argument specifies the
-# HANDLE of the parent process, otherwise it is simply boolean.
-# c.IPKernelApp.parent_handle = 0
-
-# JSON file in which to store connection info [default: kernel-<pid>.json]
-#
-# This file will contain the IP, ports, and authentication key needed to connect
-# clients to this kernel. By default, this file will be created in the security
-# dir of the current profile, but can be specified by absolute path.
-# c.IPKernelApp.connection_file = ''
-
-# If true, IPython will populate the user namespace with numpy, pylab, etc. and
-# an ``import *`` is done from numpy and pylab, when using pylab mode.
-#
-# When False, pylab mode should not import any names into the user namespace.
-c.IPKernelApp.pylab_import_all = True
-
-# The name of the IPython directory. This directory is used for logging
-# configuration (through profiles), history storage, etc. The default is usually
-# $HOME/.ipython. This options can also be specified through the environment
-# variable IPYTHONDIR.
-# c.IPKernelApp.ipython_dir = u''
-
-# Configure matplotlib for interactive use with the default matplotlib backend.
-c.IPKernelApp.matplotlib = 'inline'
-
-# ONLY USED ON WINDOWS Interrupt this process when the parent is signaled.
-# c.IPKernelApp.interrupt = 0
-
-# Whether to install the default config files into the profile dir. If a new
-# profile is being created, and IPython contains config files for that profile,
-# then they will be staged into the new directory.  Otherwise, default config
-# files will be automatically generated.
-# c.IPKernelApp.copy_config_files = False
-
-# List of files to run at IPython startup.
-# c.IPKernelApp.exec_files = []
-
-# Enable GUI event loop integration with any of ('glut', 'gtk', 'gtk3', 'none',
-# 'osx', 'pyglet', 'qt', 'qt4', 'tk', 'wx').
-# c.IPKernelApp.gui = None
-
-# A list of dotted module names of IPython extensions to load.
-# c.IPKernelApp.extensions = []
-
-# redirect stderr to the null device
-# c.IPKernelApp.no_stderr = False
-
-# The Logging format template
-# c.IPKernelApp.log_format = '[%(name)s]%(highlevel)s %(message)s'
-
-# set the iopub (PUB) port [default: random]
-# c.IPKernelApp.iopub_port = 0
-
-# ------------------------------------------------------------------------------
-# ZMQInteractiveShell configuration
-# ------------------------------------------------------------------------------
-
-# A subclass of InteractiveShell for ZMQ.
-
-# ZMQInteractiveShell will inherit config from: InteractiveShell
-
-# Use colors for displaying information about objects. Because this information
-# is passed through a pager (like 'less'), and some pagers get confused with
-# color codes, this capability can be turned off.
-# c.ZMQInteractiveShell.color_info = True
-
-# A list of ast.NodeTransformer subclass instances, which will be applied to
-# user input before code is run.
-# c.ZMQInteractiveShell.ast_transformers = []
-
-#
-# c.ZMQInteractiveShell.history_length = 10000
-
-# Don't call post-execute functions that have failed in the past.
-# c.ZMQInteractiveShell.disable_failing_post_execute = False
-
-# Show rewritten input, e.g. for autocall.
-# c.ZMQInteractiveShell.show_rewritten_input = True
-
-# Set the color scheme (NoColor, Linux, or LightBG).
-# c.ZMQInteractiveShell.colors = 'LightBG'
-
-#
-# c.ZMQInteractiveShell.separate_in = '\n'
-
-# Deprecated, use PromptManager.in2_template
-# c.ZMQInteractiveShell.prompt_in2 = '   .\\D.: '
-
-#
-# c.ZMQInteractiveShell.separate_out = ''
-
-# Deprecated, use PromptManager.in_template
-# c.ZMQInteractiveShell.prompt_in1 = 'In [\\#]: '
-
-# Enable deep (recursive) reloading by default. IPython can use the deep_reload
-# module which reloads changes in modules recursively (it replaces the reload()
-# function, so you don't need to change anything to use it). deep_reload()
-# forces a full reload of modules whose code may have changed, which the default
-# reload() function does not.  When deep_reload is off, IPython will use the
-# normal reload(), but deep_reload will still be available as dreload().
-# c.ZMQInteractiveShell.deep_reload = False
-
-# Make IPython automatically call any callable object even if you didn't type
-# explicit parentheses. For example, 'str 43' becomes 'str(43)' automatically.
-# The value can be '0' to disable the feature, '1' for 'smart' autocall, where
-# it is not applied if there are no more arguments on the line, and '2' for
-# 'full' autocall, where all callable objects are automatically called (even if
-# no arguments are present).
-# c.ZMQInteractiveShell.autocall = 0
-
-#
-# c.ZMQInteractiveShell.separate_out2 = ''
-
-# Deprecated, use PromptManager.justify
-# c.ZMQInteractiveShell.prompts_pad_left = True
-
-#
-# c.ZMQInteractiveShell.readline_parse_and_bind = ['tab: complete', '"\\C-l": clear-screen', 'set show-all-if-ambiguous on', '"\\C-o": tab-insert', '"\\C-r": reverse-search-history', '"\\C-s": forward-search-history', '"\\C-p": history-search-backward', '"\\C-n": history-search-forward', '"\\e[A": history-search-backward', '"\\e[B": history-search-forward', '"\\C-k": kill-line', '"\\C-u": unix-line-discard']
-
-# Enable magic commands to be called without the leading %.
-# c.ZMQInteractiveShell.automagic = True
-
-#
-# c.ZMQInteractiveShell.debug = False
-
-#
-# c.ZMQInteractiveShell.object_info_string_level = 0
-
-#
-# c.ZMQInteractiveShell.ipython_dir = ''
-
-#
-# c.ZMQInteractiveShell.readline_remove_delims = '-/~'
-
-# Start logging to the default log file.
-# c.ZMQInteractiveShell.logstart = False
-
-# The name of the logfile to use.
-# c.ZMQInteractiveShell.logfile = ''
-
-#
-# c.ZMQInteractiveShell.wildcards_case_sensitive = True
-
-# Save multi-line entries as one entry in readline history
-# c.ZMQInteractiveShell.multiline_history = True
-
-# Start logging to the given file in append mode.
-# c.ZMQInteractiveShell.logappend = ''
-
-#
-# c.ZMQInteractiveShell.xmode = 'Context'
-
-#
-# c.ZMQInteractiveShell.quiet = False
-
-# Deprecated, use PromptManager.out_template
-# c.ZMQInteractiveShell.prompt_out = 'Out[\\#]: '
-
-# Set the size of the output cache.  The default is 1000, you can change it
-# permanently in your config file.  Setting it to 0 completely disables the
-# caching system, and the minimum value accepted is 20 (if you provide a value
-# less than 20, it is reset to 0 and a warning is issued).  This limit is
-# defined because otherwise you'll spend more time re-flushing a too small cache
-# than working
-# c.ZMQInteractiveShell.cache_size = 1000
-
-# 'all', 'last', 'last_expr' or 'none', specifying which nodes should be run
-# interactively (displaying output from expressions).
-# c.ZMQInteractiveShell.ast_node_interactivity = 'last_expr'
-
-# Automatically call the pdb debugger after every exception.
-# c.ZMQInteractiveShell.pdb = False
-
-# ------------------------------------------------------------------------------
-# KernelManager configuration
-# ------------------------------------------------------------------------------
-
-# Manages a single kernel in a subprocess on this host.
-#
-# This version starts kernels with Popen.
-
-# KernelManager will inherit config from: ConnectionFileMixin
-
-# The Popen Command to launch the kernel. Override this if you have a custom
-# kernel. If kernel_cmd is specified in a configuration file, IPython does not
-# pass any arguments to the kernel, because it cannot make any assumptions about
-# the  arguments that the kernel understands. In particular, this means that the
-# kernel does not receive the option --debug if it given on the IPython command
-# line.
-# c.KernelManager.kernel_cmd = []
-
-# Set the kernel's IP address [default localhost]. If the IP address is
-# something other than localhost, then Consoles on other machines will be able
-# to connect to the Kernel, so be careful!
-# c.KernelManager.ip = u''
-
-#
-# c.KernelManager.transport = 'tcp'
-
-# Should we autorestart the kernel if it dies.
-# c.KernelManager.autorestart = False
-
-# ------------------------------------------------------------------------------
-# ProfileDir configuration
-# ------------------------------------------------------------------------------
-
-# An object to manage the profile directory and its resources.
-#
-# The profile directory is used by all IPython applications, to manage
-# configuration, logging and security.
-#
-# This object knows how to find, create and manage these directories. This
-# should be used by any code that wants to handle profiles.
-
-# Set the profile location directly. This overrides the logic used by the
-# `profile` option.
-# c.ProfileDir.location = u''
-
-# ------------------------------------------------------------------------------
-# Session configuration
-# ------------------------------------------------------------------------------
-
-# Object for handling serialization and sending of messages.
-#
-# The Session object handles building messages and sending them with ZMQ sockets
-# or ZMQStream objects.  Objects can communicate with each other over the
-# network via Session objects, and only need to work with the dict-based IPython
-# message spec. The Session will handle serialization/deserialization, security,
-# and metadata.
-#
-# Sessions support configurable serialiization via packer/unpacker traits, and
-# signing with HMAC digests via the key/keyfile traits.
-#
-# Parameters ----------
-#
-# debug : bool
-#     whether to trigger extra debugging statements
-# packer/unpacker : str : 'json', 'pickle' or import_string
-#     importstrings for methods to serialize message parts.  If just
-#     'json' or 'pickle', predefined JSON and pickle packers will be used.
-#     Otherwise, the entire importstring must be used.
-#
-#     The functions must accept at least valid JSON input, and output *bytes*.
-#
-#     For example, to use msgpack:
-#     packer = 'msgpack.packb', unpacker='msgpack.unpackb'
-# pack/unpack : callables
-#     You can also set the pack/unpack callables for serialization directly.
-# session : bytes
-#     the ID of this Session object.  The default is to generate a new UUID.
-# username : unicode
-#     username added to message headers.  The default is to ask the OS.
-# key : bytes
-#     The key used to initialize an HMAC signature.  If unset, messages
-#     will not be signed or checked.
-# keyfile : filepath
-#     The file containing a key.  If this is set, `key` will be initialized
-#     to the contents of the file.
-
-# Username for the Session. Default is your system username.
-# c.Session.username = u'root'
-
-# The name of the unpacker for unserializing messages. Only used with custom
-# functions for `packer`.
-# c.Session.unpacker = 'json'
-
-# Threshold (in bytes) beyond which a buffer should be sent without copying.
-# c.Session.copy_threshold = 65536
-
-# The name of the packer for serializing messages. Should be one of 'json',
-# 'pickle', or an import name for a custom callable serializer.
-# c.Session.packer = 'json'
-
-# The maximum number of digests to remember.
-#
-# The digest history will be culled when it exceeds this value.
-# c.Session.digest_history_size = 65536
-
-# The UUID identifying this session.
-# c.Session.session = u''
-
-# The digest scheme used to construct the message signatures. Must have the form
-# 'hmac-HASH'.
-# c.Session.signature_scheme = 'hmac-sha256'
-
-# execution key, for extra authentication.
-# c.Session.key = ''
-
-# Debug output in the Session
-# c.Session.debug = False
-
-# The maximum number of items for a container to be introspected for custom
-# serialization. Containers larger than this are pickled outright.
-# c.Session.item_threshold = 64
-
-# path to file containing execution key.
-# c.Session.keyfile = ''
-
-# Threshold (in bytes) beyond which an object's buffer should be extracted to
-# avoid pickling.
-# c.Session.buffer_threshold = 1024
-
-# Metadata dictionary, which serves as the default top-level metadata dict for
-# each message.
-# c.Session.metadata = {}
-
-# ------------------------------------------------------------------------------
-# InlineBackend configuration
-# ------------------------------------------------------------------------------
-
-# An object to store configuration of the inline backend.
-
-# The figure format to enable (deprecated use `figure_formats` instead)
-c.InlineBackend.figure_format = u'png'
-
-# A set of figure formats to enable: 'png',  'retina', 'jpeg', 'svg', 'pdf'.
-c.InlineBackend.figure_formats = set(['png'])
-
-# Extra kwargs to be passed to fig.canvas.print_figure.
-#
-# Logical examples include: bbox_inches, quality (for jpeg figures), etc.
-# c.InlineBackend.print_figure_kwargs = {'bbox_inches': 'tight'}
-
-# Close all figures at the end of each cell.
-#
-# When True, ensures that each cell starts with no active figures, but it also
-# means that one must keep track of references in order to edit or redraw
-# figures in subsequent cells. This mode is ideal for the notebook, where
-# residual plots from other cells might be surprising.
-#
-# When False, one must call figure() to create new figures. This means that
-# gcf() and getfigs() can reference figures created in other cells, and the
-# active figure can continue to be edited with pylab/pyplot methods that
-# reference the current active figure. This mode facilitates iterative editing
-# of figures, and behaves most consistently with other matplotlib backends, but
-# figure barriers between cells must be explicit.
-# c.InlineBackend.close_figures = True
-
-# Subset of matplotlib rcParams that should be different for the inline backend.
-c.InlineBackend.rc = {'font.size': 10, 'figure.figsize': (6.0, 4.0), 'figure.facecolor': (1, 1, 1, 0), 'savefig.dpi': 72, 'figure.subplot.bottom': 0.125, 'figure.edgecolor': (1, 1, 1, 0)}
-
-# ------------------------------------------------------------------------------
-# MappingKernelManager configuration
-# ------------------------------------------------------------------------------
-
-# A KernelManager that handles notebook mapping and HTTP error handling
-
-# MappingKernelManager will inherit config from: MultiKernelManager
-
-#
-# c.MappingKernelManager.root_dir = u'/root/.ipython/profile_default'
-
-# The kernel manager class.  This is configurable to allow subclassing of the
-# KernelManager for customized behavior.
-# c.MappingKernelManager.kernel_manager_class = 'IPython.kernel.ioloop.IOLoopKernelManager'
-
-# ------------------------------------------------------------------------------
-# NotebookManager configuration
-# ------------------------------------------------------------------------------
-
-# Glob patterns to hide in file and directory listings.
-# c.NotebookManager.hide_globs = [u'__pycache__']
-
-# ------------------------------------------------------------------------------
-# FileNotebookManager configuration
-# ------------------------------------------------------------------------------
-
-# FileNotebookManager will inherit config from: NotebookManager
-
-# The directory name in which to keep notebook checkpoints
-#
-# This is a path relative to the notebook's own directory.
-#
-# By default, it is .ipynb_checkpoints
-# c.FileNotebookManager.checkpoint_dir = '.ipynb_checkpoints'
-
-# Glob patterns to hide in file and directory listings.
-# c.FileNotebookManager.hide_globs = [u'__pycache__']
-
-# Automatically create a Python script when saving the notebook.
-#
-# For easier use of import, %run and %load across notebooks, a <notebook-
-# name>.py script will be created next to any <notebook-name>.ipynb on each
-# save.  This can also be set with the short `--script` flag.
-# c.FileNotebookManager.save_script = False
-
-#
-# c.FileNotebookManager.notebook_dir = u'/root/.ipython/profile_default'
-
-c.FileContentsManager.root_dir = '/'
-
-# ------------------------------------------------------------------------------
-# NotebookNotary configuration
-# ------------------------------------------------------------------------------
-
-# A class for computing and verifying notebook signatures.
-
-# The secret key with which notebooks are signed.
-# c.NotebookNotary.secret = ''
-
-# The file where the secret key is stored.
-# c.NotebookNotary.secret_file = u''
-
-# The hashing algorithm used to sign notebooks.
-# c.NotebookNotary.algorithm = 'sha256'
-
-
-# ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## #
-# # NEWER CONFIG
-# ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## #
 # Configuration file for jupyter-notebook.
 
-# ------------------------------------------------------------------------------
+#------------------------------------------------------------------------------
 # Application(SingletonConfigurable) configuration
-# ------------------------------------------------------------------------------
+#------------------------------------------------------------------------------
+## This is an application.
 
-# # This is an application.
-
-# # The date format used by logging formatters for %(asctime)s
+## The date format used by logging formatters for %(asctime)s
+#  Default: '%Y-%m-%d %H:%M:%S'
 # c.Application.log_datefmt = '%Y-%m-%d %H:%M:%S'
 
-# # The Logging format template
+## The Logging format template
+#  Default: '[%(name)s]%(highlevel)s %(message)s'
 # c.Application.log_format = '[%(name)s]%(highlevel)s %(message)s'
 
-# # Set the log level by value or name.
+## Set the log level by value or name.
+#  Choices: any of [0, 10, 20, 30, 40, 50, 'DEBUG', 'INFO', 'WARN', 'ERROR', 'CRITICAL']
+#  Default: 30
 # c.Application.log_level = 30
 
-# ------------------------------------------------------------------------------
+## Instead of starting the Application, dump configuration to stdout
+#  Default: False
+# c.Application.show_config = False
+
+## Instead of starting the Application, dump configuration to stdout (as JSON)
+#  Default: False
+# c.Application.show_config_json = False
+
+#------------------------------------------------------------------------------
 # JupyterApp(Application) configuration
-# ------------------------------------------------------------------------------
+#------------------------------------------------------------------------------
+## Base class for Jupyter applications
 
-# # Base class for Jupyter applications
+## Answer yes to any prompts.
+#  Default: False
+# c.JupyterApp.answer_yes = False
 
-# # Answer yes to any prompts.
-# c.JupyterApp.answer_yes = True
-
-# # Full path of a config file.
+## Full path of a config file.
+#  Default: ''
 # c.JupyterApp.config_file = ''
 
-# # Specify a config file to load.
+## Specify a config file to load.
+#  Default: ''
 # c.JupyterApp.config_file_name = ''
 
-# # Generate default config file.
+## Generate default config file.
+#  Default: False
 # c.JupyterApp.generate_config = False
 
-# ------------------------------------------------------------------------------
-# NotebookApp(JupyterApp) configuration
-# ------------------------------------------------------------------------------
+## The date format used by logging formatters for %(asctime)s
+#  See also: Application.log_datefmt
+# c.JupyterApp.log_datefmt = '%Y-%m-%d %H:%M:%S'
 
-# # Set the Access-Control-Allow-Credentials: true header
+## The Logging format template
+#  See also: Application.log_format
+# c.JupyterApp.log_format = '[%(name)s]%(highlevel)s %(message)s'
+
+## Set the log level by value or name.
+#  See also: Application.log_level
+# c.JupyterApp.log_level = 30
+
+## Instead of starting the Application, dump configuration to stdout
+#  See also: Application.show_config
+# c.JupyterApp.show_config = False
+
+## Instead of starting the Application, dump configuration to stdout (as JSON)
+#  See also: Application.show_config_json
+# c.JupyterApp.show_config_json = False
+
+#------------------------------------------------------------------------------
+# NotebookApp(JupyterApp) configuration
+#------------------------------------------------------------------------------
+## Set the Access-Control-Allow-Credentials: true header
+#  Default: False
 # c.NotebookApp.allow_credentials = False
 
-# # Set the Access-Control-Allow-Origin header
+## Set the Access-Control-Allow-Origin header
 #
-#  Use '*' to allow any origin to access your server.
+#          Use '*' to allow any origin to access your server.
 #
-#  Takes precedence over allow_origin_pat.
+#          Takes precedence over allow_origin_pat.
+#  Default: ''
 # c.NotebookApp.allow_origin = ''
 
-# # Use a regular expression for the Access-Control-Allow-Origin header
+## Use a regular expression for the Access-Control-Allow-Origin header
 #
-#  Requests from an origin matching the expression will get replies with:
+#          Requests from an origin matching the expression will get replies with:
 #
-#      Access-Control-Allow-Origin: origin
+#              Access-Control-Allow-Origin: origin
 #
-#  where `origin` is the origin of the request.
+#          where `origin` is the origin of the request.
 #
-#  Ignored if allow_origin is set.
+#          Ignored if allow_origin is set.
+#  Default: ''
 # c.NotebookApp.allow_origin_pat = ''
 
-# # DEPRECATED use base_url
+## Allow password to be changed at login for the notebook server.
+#
+#                      While loggin in with a token, the notebook server UI will give the opportunity to
+#                      the user to enter a new password at the same time that will replace
+#                      the token login mechanism.
+#
+#                      This can be set to false to prevent changing password from
+#  the UI/API.
+#  Default: True
+# c.NotebookApp.allow_password_change = True
+
+## Allow requests where the Host header doesn't point to a local server
+#
+#         By default, requests get a 403 forbidden response if the 'Host' header
+#         shows that the browser thinks it's on a non-local domain.
+#         Setting this option to True disables this check.
+#
+#         This protects against 'DNS rebinding' attacks, where a remote web server
+#         serves you a page and then changes its DNS to send later requests to a
+#         local IP, bypassing same-origin checks.
+#
+#         Local IP addresses (such as 127.0.0.1 and ::1) are allowed as local,
+#         along with hostnames configured in local_hostnames.
+#  Default: False
+# c.NotebookApp.allow_remote_access = False
+
+## Whether to allow the user to run the notebook as root.
+#  Default: False
+# c.NotebookApp.allow_root = False
+
+## Answer yes to any prompts.
+#  See also: JupyterApp.answer_yes
+# c.NotebookApp.answer_yes = False
+
+## "
+#          Require authentication to access prometheus metrics.
+#  Default: True
+# c.NotebookApp.authenticate_prometheus = True
+
+## Reload the webapp when changes are made to any Python src files.
+#  Default: False
+# c.NotebookApp.autoreload = False
+
+## DEPRECATED use base_url
+#  Default: '/'
 # c.NotebookApp.base_project_url = '/'
 
-# # The base URL for the notebook server.
+## The base URL for the notebook server.
 #
-#  Leading and trailing slashes can be omitted, and will automatically be added.
-# c.NotebookApp.base_url = 'notebooks'
+#                                 Leading and trailing slashes can be omitted,
+#                                 and will automatically be added.
+#  Default: '/'
+# c.NotebookApp.base_url = '/'
 
-# # Specify what command to use to invoke a web browser when opening the notebook.
-#  If not specified, the default browser will be determined by the `webbrowser`
-#  standard library module, which allows setting of the BROWSER environment
-#  variable to override it.
+## Specify what command to use to invoke a web
+#                        browser when opening the notebook. If not specified, the
+#                        default browser will be determined by the `webbrowser`
+#                        standard library module, which allows setting of the
+#                        BROWSER environment variable to override it.
+#  Default: ''
 # c.NotebookApp.browser = ''
 
-# # The full path to an SSL/TLS certificate file.
+## The full path to an SSL/TLS certificate file.
+#  Default: ''
 # c.NotebookApp.certfile = ''
 
-# # The full path to a certificate authority certificate for SSL/TLS client
+## The full path to a certificate authority certificate for SSL/TLS client
 #  authentication.
+#  Default: ''
 # c.NotebookApp.client_ca = ''
 
-# # The config manager class to use
+## Full path of a config file.
+#  See also: JupyterApp.config_file
+# c.NotebookApp.config_file = ''
+
+## Specify a config file to load.
+#  See also: JupyterApp.config_file_name
+# c.NotebookApp.config_file_name = ''
+
+## The config manager class to use
+#  Default: 'notebook.services.config.manager.ConfigManager'
 # c.NotebookApp.config_manager_class = 'notebook.services.config.manager.ConfigManager'
 
-# # The notebook manager class to use.
-# c.NotebookApp.contents_manager_class = 'notebook.services.contents.filemanager.FileContentsManager'
+## The notebook manager class to use.
+#  Default: 'notebook.services.contents.largefilemanager.LargeFileManager'
+# c.NotebookApp.contents_manager_class = 'notebook.services.contents.largefilemanager.LargeFileManager'
 
-# # Extra keyword arguments to pass to `set_secure_cookie`. See tornado's
+## Extra keyword arguments to pass to `set_secure_cookie`. See tornado's
 #  set_secure_cookie docs for details.
+#  Default: {}
 # c.NotebookApp.cookie_options = {}
 
-# # The random bytes used to secure cookies. By default this is a new random
-#  number every time you start the Notebook. Set it to a value in a config file
-#  to enable logins to persist across server sessions.
+## The random bytes used to secure cookies.
+#          By default this is a new random number every time you start the Notebook.
+#          Set it to a value in a config file to enable logins to persist across server sessions.
 #
-#  Note: Cookie secrets should be kept private, do not share config files with
-#  cookie_secret stored in plaintext (you can read the value from a file).
+#          Note: Cookie secrets should be kept private, do not share config files with
+#          cookie_secret stored in plaintext (you can read the value from a file).
+#  Default: b''
 # c.NotebookApp.cookie_secret = b''
 
-# # The file where the cookie secret is stored.
+## The file where the cookie secret is stored.
+#  Default: ''
 # c.NotebookApp.cookie_secret_file = ''
 
-# # The default URL to redirect to from `/`
+## Override URL shown to users.
+#
+#          Replace actual URL, including protocol, address, port and base URL,
+#          with the given value when displaying URL to the users. Do not change
+#          the actual connection URL. If authentication token is enabled, the
+#          token is added to the custom URL automatically.
+#
+#          This option is intended to be used when the URL to display to the user
+#          cannot be determined reliably by the Jupyter notebook server (proxified
+#          or containerized setups for example).
+#  Default: ''
+# c.NotebookApp.custom_display_url = ''
+
+## The default URL to redirect to from `/`
+#  Default: '/tree'
 # c.NotebookApp.default_url = '/tree'
 
-# # Disable cross-site-request-forgery protection
+## Disable cross-site-request-forgery protection
 #
-#  Jupyter notebook 4.3.1 introduces protection from cross-site request
-#  forgeries, requiring API requests to either:
+#          Jupyter notebook 4.3.1 introduces protection from cross-site request forgeries,
+#          requiring API requests to either:
 #
-#  - originate from pages served by this server (validated with XSRF cookie and
-#  token), or - authenticate with a token
+#          - originate from pages served by this server (validated with XSRF cookie and token), or
+#          - authenticate with a token
 #
-#  Some anonymous compute resources still desire the ability to run code,
-#  completely without authentication. These services can disable all
-#  authentication and security checks, with the full knowledge of what that
-#  implies.
+#          Some anonymous compute resources still desire the ability to run code,
+#          completely without authentication.
+#          These services can disable all authentication and security checks,
+#          with the full knowledge of what that implies.
+#  Default: False
 # c.NotebookApp.disable_check_xsrf = False
 
-# # Whether to enable MathJax for typesetting math/TeX
+## Whether to enable MathJax for typesetting math/TeX
 #
-#  MathJax is the javascript library Jupyter uses to render math/LaTeX. It is
-#  very large, so you may want to disable it if you have a slow internet
-#  connection, or for offline use of the notebook.
+#          MathJax is the javascript library Jupyter uses to render math/LaTeX. It is
+#          very large, so you may want to disable it if you have a slow internet
+#          connection, or for offline use of the notebook.
 #
-#  When disabled, equations etc. will appear as their untransformed TeX source.
+#          When disabled, equations etc. will appear as their untransformed TeX
+#  source.
+#  Default: True
 # c.NotebookApp.enable_mathjax = True
 
-# # extra paths to look for Javascript notebook extensions
+## extra paths to look for Javascript notebook extensions
+#  Default: []
 # c.NotebookApp.extra_nbextensions_path = []
 
-# # Extra paths to search for serving static files.
+## handlers that should be loaded at higher priority than the default services
+#  Default: []
+# c.NotebookApp.extra_services = []
+
+## Extra paths to search for serving static files.
 #
-#  This allows adding javascript/css to be available from the notebook server
-#  machine, or overriding individual files in the IPython
+#          This allows adding javascript/css to be available from the notebook server machine,
+#          or overriding individual files in the IPython
+#  Default: []
 # c.NotebookApp.extra_static_paths = []
 
-# # Extra paths to search for serving jinja templates.
+## Extra paths to search for serving jinja templates.
 #
-#  Can be used to override templates from notebook.templates.
+#          Can be used to override templates from notebook.templates.
+#  Default: []
 # c.NotebookApp.extra_template_paths = []
 
-# #
+#  Default: ''
 # c.NotebookApp.file_to_run = ''
 
-# # Use minified JS file or not, mainly use during dev to avoid JS recompilation
+## Generate default config file.
+#  See also: JupyterApp.generate_config
+# c.NotebookApp.generate_config = False
+
+## Extra keyword arguments to pass to `get_secure_cookie`. See tornado's
+#  get_secure_cookie docs for details.
+#  Default: {}
+# c.NotebookApp.get_secure_cookie_kwargs = {}
+
+## Deprecated: Use minified JS file or not, mainly use during dev to avoid JS
+#  recompilation
+#  Default: False
 # c.NotebookApp.ignore_minified_js = False
 
-# # (bytes/sec) Maximum rate at which messages can be sent on iopub before they
-#  are limited.
-# c.NotebookApp.iopub_data_rate_limit = 0
+## (bytes/sec)
+#          Maximum rate at which stream output can be sent on iopub before they are
+#          limited.
+#  Default: 1000000
+# c.NotebookApp.iopub_data_rate_limit = 1000000
 
-# # (msg/sec) Maximum rate at which messages can be sent on iopub before they are
-#  limited.
-# c.NotebookApp.iopub_msg_rate_limit = 0
+## (msgs/sec)
+#          Maximum rate at which messages can be sent on iopub before they are
+#          limited.
+#  Default: 1000
+# c.NotebookApp.iopub_msg_rate_limit = 1000
 
-# # The IP address the notebook server will listen on.
+## The IP address the notebook server will listen on.
+#  Default: 'localhost'
 # c.NotebookApp.ip = 'localhost'
 
-# # Supply extra arguments that will be passed to Jinja environment.
+## Supply extra arguments that will be passed to Jinja environment.
+#  Default: {}
 # c.NotebookApp.jinja_environment_options = {}
 
-# # Extra variables to supply to jinja templates when rendering.
+## Extra variables to supply to jinja templates when rendering.
+#  Default: {}
 # c.NotebookApp.jinja_template_vars = {}
 
-# # The kernel manager class to use.
+## The kernel manager class to use.
+#  Default: 'notebook.services.kernels.kernelmanager.MappingKernelManager'
 # c.NotebookApp.kernel_manager_class = 'notebook.services.kernels.kernelmanager.MappingKernelManager'
 
-# # The kernel spec manager class to use. Should be a subclass of
+## The kernel spec manager class to use. Should be a subclass of
 #  `jupyter_client.kernelspec.KernelSpecManager`.
 #
 #  The Api of KernelSpecManager is provisional and might change without warning
 #  between this version of Jupyter and the next stable one.
+#  Default: 'jupyter_client.kernelspec.KernelSpecManager'
 # c.NotebookApp.kernel_spec_manager_class = 'jupyter_client.kernelspec.KernelSpecManager'
 
-# # The full path to a private key file for usage with SSL/TLS.
+## The full path to a private key file for usage with SSL/TLS.
+#  Default: ''
 # c.NotebookApp.keyfile = ''
 
-# # The login handler class to use.
+## Hostnames to allow as local when allow_remote_access is False.
+#
+#         Local IP addresses (such as 127.0.0.1 and ::1) are automatically accepted
+#         as local as well.
+#  Default: ['localhost']
+# c.NotebookApp.local_hostnames = ['localhost']
+
+## The date format used by logging formatters for %(asctime)s
+#  See also: Application.log_datefmt
+# c.NotebookApp.log_datefmt = '%Y-%m-%d %H:%M:%S'
+
+## The Logging format template
+#  See also: Application.log_format
+# c.NotebookApp.log_format = '[%(name)s]%(highlevel)s %(message)s'
+
+## Set to True to enable JSON formatted logs. Run "pip install notebook[json-
+#  logging]" to install the required dependent packages. Can also be set using
+#  the environment variable JUPYTER_ENABLE_JSON_LOGGING=true.
+#  Default: False
+# c.NotebookApp.log_json = False
+
+## Set the log level by value or name.
+#  See also: Application.log_level
+# c.NotebookApp.log_level = 30
+
+## The login handler class to use.
+#  Default: 'notebook.auth.login.LoginHandler'
 # c.NotebookApp.login_handler_class = 'notebook.auth.login.LoginHandler'
 
-# # The logout handler class to use.
+## The logout handler class to use.
+#  Default: 'notebook.auth.logout.LogoutHandler'
 # c.NotebookApp.logout_handler_class = 'notebook.auth.logout.LogoutHandler'
 
-# # A custom url for MathJax.js. Should be in the form of a case-sensitive url to
-#  MathJax, for example:  /static/components/MathJax/MathJax.js
+## The MathJax.js configuration file that is to be used.
+#  Default: 'TeX-AMS-MML_HTMLorMML-full,Safe'
+# c.NotebookApp.mathjax_config = 'TeX-AMS-MML_HTMLorMML-full,Safe'
+
+## A custom url for MathJax.js.
+#          Should be in the form of a case-sensitive url to MathJax,
+#          for example:  /static/components/MathJax/MathJax.js
+#  Default: ''
 # c.NotebookApp.mathjax_url = ''
 
-# # Dict of Python modules to load as notebook server extensions.Entry values can
-#  be used to enable and disable the loading ofthe extensions. The extensions
+## Sets the maximum allowed size of the client request body, specified in the
+#  Content-Length request header field. If the size in a request exceeds the
+#  configured value, a malformed HTTP message is returned to the client.
+#
+#  Note: max_body_size is applied even in streaming mode.
+#  Default: 536870912
+# c.NotebookApp.max_body_size = 536870912
+
+## Gets or sets the maximum amount of memory, in bytes, that is allocated for use
+#  by the buffer manager.
+#  Default: 536870912
+# c.NotebookApp.max_buffer_size = 536870912
+
+## Gets or sets a lower bound on the open file handles process resource limit.
+#  This may need to be increased if you run into an OSError: [Errno 24] Too many
+#  open files. This is not applicable when running on Windows.
+#  Default: 0
+# c.NotebookApp.min_open_files_limit = 0
+
+## Dict of Python modules to load as notebook server extensions. Entry values can
+#  be used to enable and disable the loading of the extensions. The extensions
 #  will be loaded in alphabetical order.
+#  Default: {}
 # c.NotebookApp.nbserver_extensions = {}
 
-# # The directory to use for notebooks and kernels.
+## The directory to use for notebooks and kernels.
+#  Default: ''
 # c.NotebookApp.notebook_dir = ''
 
-# # Whether to open in a browser after starting. The specific browser used is
-#  platform dependent and determined by the python standard library `webbrowser`
-#  module, unless it is overridden using the --browser (NotebookApp.browser)
-#  configuration option.
+## Whether to open in a browser after starting.
+#                          The specific browser used is platform dependent and
+#                          determined by the python standard library `webbrowser`
+#                          module, unless it is overridden using the --browser
+#                          (NotebookApp.browser) configuration option.
+#  Default: True
 # c.NotebookApp.open_browser = True
 
-# # Hashed password to use for web authentication.
+## Hashed password to use for web authentication.
 #
-#  To generate, type in a python/IPython shell:
+#                        To generate, type in a python/IPython shell:
 #
-#    from notebook.auth import passwd; passwd()
+#                          from notebook.auth import passwd; passwd()
 #
-#  The string should be of the form type:salt:hashed-password.
+#                        The string should be of the form type:salt:hashed-
+#  password.
+#  Default: ''
 # c.NotebookApp.password = ''
 
-# # The port the notebook server will listen on.
+## Forces users to use a password for the Notebook server.
+#                        This is useful in a multi user environment, for instance when
+#                        everybody in the LAN can access each other's machine through ssh.
+#
+#                        In such a case, serving the notebook server on localhost is not secure
+#                        since any user can connect to the notebook server via ssh.
+#  Default: False
+# c.NotebookApp.password_required = False
+
+## The port the notebook server will listen on (env: JUPYTER_PORT).
+#  Default: 8888
 # c.NotebookApp.port = 8888
 
-# # The number of additional ports to try if the specified port is not available.
+## The number of additional ports to try if the specified port is not available
+#  (env: JUPYTER_PORT_RETRIES).
+#  Default: 50
 # c.NotebookApp.port_retries = 50
 
-# # DISABLED: use %pylab or %matplotlib in the notebook to enable matplotlib.
+## DISABLED: use %pylab or %matplotlib in the notebook to enable matplotlib.
+#  Default: 'disabled'
 # c.NotebookApp.pylab = 'disabled'
 
-# # (sec) Time window used to  check the message and data rate limits.
-# c.NotebookApp.rate_limit_window = 1.0
+## If True, display a button in the dashboard to quit
+#          (shutdown the notebook server).
+#  Default: True
+# c.NotebookApp.quit_button = True
 
-# # Reraise exceptions encountered loading server extensions?
+## (sec) Time window used to
+#          check the message and data rate limits.
+#  Default: 3
+# c.NotebookApp.rate_limit_window = 3
+
+## Reraise exceptions encountered loading server extensions?
+#  Default: False
 # c.NotebookApp.reraise_server_extension_failures = False
 
-# # DEPRECATED use the nbserver_extensions dict instead
+## DEPRECATED use the nbserver_extensions dict instead
+#  Default: []
 # c.NotebookApp.server_extensions = []
 
-# # The session manager class to use.
+## The session manager class to use.
+#  Default: 'notebook.services.sessions.sessionmanager.SessionManager'
 # c.NotebookApp.session_manager_class = 'notebook.services.sessions.sessionmanager.SessionManager'
 
-# # Supply SSL options for the tornado HTTPServer. See the tornado docs for
-#  details.
+## Instead of starting the Application, dump configuration to stdout
+#  See also: Application.show_config
+# c.NotebookApp.show_config = False
+
+## Instead of starting the Application, dump configuration to stdout (as JSON)
+#  See also: Application.show_config_json
+# c.NotebookApp.show_config_json = False
+
+## Shut down the server after N seconds with no kernels or terminals running and
+#  no activity. This can be used together with culling idle kernels
+#  (MappingKernelManager.cull_idle_timeout) to shutdown the notebook server when
+#  it's not in use. This is not precisely timed: it may shut down up to a minute
+#  later. 0 (the default) disables this automatic shutdown.
+#  Default: 0
+# c.NotebookApp.shutdown_no_activity_timeout = 0
+
+## The UNIX socket the notebook server will listen on.
+#  Default: ''
+# c.NotebookApp.sock = ''
+
+## The permissions mode for UNIX socket creation (default: 0600).
+#  Default: '0600'
+# c.NotebookApp.sock_mode = '0600'
+
+## Supply SSL options for the tornado HTTPServer.
+#              See the tornado docs for details.
+#  Default: {}
 # c.NotebookApp.ssl_options = {}
 
-# # Token used for authenticating first-time connections to the server.
+## Supply overrides for terminado. Currently only supports "shell_command". On
+#  Unix, if "shell_command" is not provided, a non-login shell is launched by
+#  default when the notebook server is connected to a terminal, a login shell
+#  otherwise.
+#  Default: {}
+# c.NotebookApp.terminado_settings = {}
+
+## Set to False to disable terminals.
 #
-#  When no password is enabled, the default is to generate a new, random token.
+#           This does *not* make the notebook server more secure by itself.
+#           Anything the user can in a terminal, they can also do in a notebook.
 #
-#  Setting to an empty string disables authentication altogether, which is NOT
-#  RECOMMENDED.
+#           Terminals may also be automatically disabled if the terminado package
+#           is not available.
+#  Default: True
+# c.NotebookApp.terminals_enabled = True
+
+## Token used for authenticating first-time connections to the server.
+#
+#          The token can be read from the file referenced by JUPYTER_TOKEN_FILE or set directly
+#          with the JUPYTER_TOKEN environment variable.
+#
+#          When no password is enabled,
+#          the default is to generate a new, random token.
+#
+#          Setting to an empty string disables authentication altogether, which
+#  is NOT RECOMMENDED.
+#  Default: '<generated>'
 # c.NotebookApp.token = '<generated>'
 
-# # Supply overrides for the tornado.web.Application that the Jupyter notebook
+## Supply overrides for the tornado.web.Application that the Jupyter notebook
 #  uses.
+#  Default: {}
 # c.NotebookApp.tornado_settings = {}
 
-# # Whether to trust or not X-Scheme/X-Forwarded-Proto and X-Real-Ip/X-Forwarded-
-#  For headerssent by the upstream reverse proxy. Necessary if the proxy handles
+## Whether to trust or not X-Scheme/X-Forwarded-Proto and X-Real-Ip/X-Forwarded-
+#  For headers sent by the upstream reverse proxy. Necessary if the proxy handles
 #  SSL
+#  Default: False
 # c.NotebookApp.trust_xheaders = False
 
-# # DEPRECATED, use tornado_settings
+## Disable launching browser by redirect file
+#
+#          For versions of notebook > 5.7.2, a security feature measure was added that
+#          prevented the authentication token used to launch the browser from being visible.
+#          This feature makes it difficult for other users on a multi-user system from
+#          running code in your Jupyter session as you.
+#
+#          However, some environments (like Windows Subsystem for Linux (WSL) and Chromebooks),
+#          launching a browser using a redirect file can lead the browser failing to load.
+#          This is because of the difference in file structures/paths between the runtime and
+#          the browser.
+#
+#          Disabling this setting to False will disable this behavior, allowing the browser
+#          to launch by using a URL and visible token (as before).
+#  Default: True
+# c.NotebookApp.use_redirect_file = True
+
+## DEPRECATED, use tornado_settings
+#  Default: {}
 # c.NotebookApp.webapp_settings = {}
 
-# # The base URL for websockets, if it differs from the HTTP server (hint: it
-#  almost certainly doesn't).
+## Specify Where to open the notebook on startup. This is the
+#          `new` argument passed to the standard library method `webbrowser.open`.
+#          The behaviour is not guaranteed, but depends on browser support. Valid
+#          values are:
 #
-#  Should be in the form of an HTTP origin: ws[s]://hostname[:port]
+#           - 2 opens a new tab,
+#           - 1 opens a new window,
+#           - 0 opens in an existing window.
+#
+#          See the `webbrowser.open` documentation for details.
+#  Default: 2
+# c.NotebookApp.webbrowser_open_new = 2
+
+## Set the tornado compression options for websocket connections.
+#
+#  This value will be returned from
+#  :meth:`WebSocketHandler.get_compression_options`. None (default) will disable
+#  compression. A dict (even an empty one) will enable compression.
+#
+#  See the tornado docs for WebSocketHandler.get_compression_options for details.
+#  Default: None
+# c.NotebookApp.websocket_compression_options = None
+
+## The base URL for websockets,
+#          if it differs from the HTTP server (hint: it almost certainly doesn't).
+#
+#          Should be in the form of an HTTP origin: ws[s]://hostname[:port]
+#  Default: ''
 # c.NotebookApp.websocket_url = ''
 
-# ------------------------------------------------------------------------------
+#------------------------------------------------------------------------------
 # ConnectionFileMixin(LoggingConfigurable) configuration
-# ------------------------------------------------------------------------------
+#------------------------------------------------------------------------------
+## Mixin for configurable classes that work with connection files
 
-# # Mixin for configurable classes that work with connection files
-
-# # JSON file in which to store connection info [default: kernel-<pid>.json]
+## JSON file in which to store connection info [default: kernel-<pid>.json]
 #
-#  This file will contain the IP, ports, and authentication key needed to connect
-#  clients to this kernel. By default, this file will be created in the security
-#  dir of the current profile, but can be specified by absolute path.
+#      This file will contain the IP, ports, and authentication key needed to connect
+#      clients to this kernel. By default, this file will be created in the security dir
+#      of the current profile, but can be specified by absolute path.
+#  Default: ''
 # c.ConnectionFileMixin.connection_file = ''
 
-# # set the control (ROUTER) port [default: random]
+## set the control (ROUTER) port [default: random]
+#  Default: 0
 # c.ConnectionFileMixin.control_port = 0
 
-# # set the heartbeat port [default: random]
+## set the heartbeat port [default: random]
+#  Default: 0
 # c.ConnectionFileMixin.hb_port = 0
 
-# # set the iopub (PUB) port [default: random]
+## set the iopub (PUB) port [default: random]
+#  Default: 0
 # c.ConnectionFileMixin.iopub_port = 0
 
-# # Set the kernel's IP address [default localhost]. If the IP address is
-#  something other than localhost, then Consoles on other machines will be able
-#  to connect to the Kernel, so be careful!
+## Set the kernel's IP address [default localhost].
+#          If the IP address is something other than localhost, then
+#          Consoles on other machines will be able to connect
+#          to the Kernel, so be careful!
+#  Default: ''
 # c.ConnectionFileMixin.ip = ''
 
-# # set the shell (ROUTER) port [default: random]
+## set the shell (ROUTER) port [default: random]
+#  Default: 0
 # c.ConnectionFileMixin.shell_port = 0
 
-# # set the stdin (ROUTER) port [default: random]
+## set the stdin (ROUTER) port [default: random]
+#  Default: 0
 # c.ConnectionFileMixin.stdin_port = 0
 
-# #
+#  Choices: any of ['tcp', 'ipc'] (case-insensitive)
+#  Default: 'tcp'
 # c.ConnectionFileMixin.transport = 'tcp'
 
-# ------------------------------------------------------------------------------
+#------------------------------------------------------------------------------
 # KernelManager(ConnectionFileMixin) configuration
-# ------------------------------------------------------------------------------
-
-# # Manages a single kernel in a subprocess on this host.
+#------------------------------------------------------------------------------
+## Manages a single kernel in a subprocess on this host.
 #
-#  This version starts kernels with Popen.
+#      This version starts kernels with Popen.
 
-# # Should we autorestart the kernel if it dies.
+## Should we autorestart the kernel if it dies.
+#  Default: True
 # c.KernelManager.autorestart = True
 
-# # DEPRECATED: Use kernel_name instead.
-#
-#  The Popen Command to launch the kernel. Override this if you have a custom
-#  kernel. If kernel_cmd is specified in a configuration file, Jupyter does not
-#  pass any arguments to the kernel, because it cannot make any assumptions about
-#  the arguments that the kernel understands. In particular, this means that the
-#  kernel does not receive the option --debug if it given on the Jupyter command
-#  line.
-# c.KernelManager.kernel_cmd = []
+## JSON file in which to store connection info [default: kernel-<pid>.json]
+#  See also: ConnectionFileMixin.connection_file
+# c.KernelManager.connection_file = ''
 
-# # Time to wait for a kernel to terminate before killing it, in seconds.
+## set the control (ROUTER) port [default: random]
+#  See also: ConnectionFileMixin.control_port
+# c.KernelManager.control_port = 0
+
+## set the heartbeat port [default: random]
+#  See also: ConnectionFileMixin.hb_port
+# c.KernelManager.hb_port = 0
+
+## set the iopub (PUB) port [default: random]
+#  See also: ConnectionFileMixin.iopub_port
+# c.KernelManager.iopub_port = 0
+
+## Set the kernel's IP address [default localhost].
+#  See also: ConnectionFileMixin.ip
+# c.KernelManager.ip = ''
+
+## set the shell (ROUTER) port [default: random]
+#  See also: ConnectionFileMixin.shell_port
+# c.KernelManager.shell_port = 0
+
+## Time to wait for a kernel to terminate before killing it, in seconds. When a
+#  shutdown request is initiated, the kernel will be immediately sent an
+#  interrupt (SIGINT), followedby a shutdown_request message, after 1/2 of
+#  `shutdown_wait_time`it will be sent a terminate (SIGTERM) request, and finally
+#  at the end of `shutdown_wait_time` will be killed (SIGKILL). terminate and
+#  kill may be equivalent on windows.  Note that this value can beoverridden by
+#  the in-use kernel provisioner since shutdown times mayvary by provisioned
+#  environment.
+#  Default: 5.0
 # c.KernelManager.shutdown_wait_time = 5.0
 
-# ------------------------------------------------------------------------------
+## set the stdin (ROUTER) port [default: random]
+#  See also: ConnectionFileMixin.stdin_port
+# c.KernelManager.stdin_port = 0
+
+#  See also: ConnectionFileMixin.transport
+# c.KernelManager.transport = 'tcp'
+
+#------------------------------------------------------------------------------
 # Session(Configurable) configuration
-# ------------------------------------------------------------------------------
+#------------------------------------------------------------------------------
+## Object for handling serialization and sending of messages.
+#
+#      The Session object handles building messages and sending them
+#      with ZMQ sockets or ZMQStream objects.  Objects can communicate with each
+#      other over the network via Session objects, and only need to work with the
+#      dict-based IPython message spec. The Session will handle
+#      serialization/deserialization, security, and metadata.
+#
+#      Sessions support configurable serialization via packer/unpacker traits,
+#      and signing with HMAC digests via the key/keyfile traits.
+#
+#      Parameters
+#      ----------
+#
+#      debug : bool
+#          whether to trigger extra debugging statements
+#      packer/unpacker : str : 'json', 'pickle' or import_string
+#          importstrings for methods to serialize message parts.  If just
+#          'json' or 'pickle', predefined JSON and pickle packers will be used.
+#          Otherwise, the entire importstring must be used.
+#
+#          The functions must accept at least valid JSON input, and output
+#  *bytes*.
+#
+#          For example, to use msgpack:
+#          packer = 'msgpack.packb', unpacker='msgpack.unpackb'
+#      pack/unpack : callables
+#          You can also set the pack/unpack callables for serialization directly.
+#      session : bytes
+#          the ID of this Session object.  The default is to generate a new UUID.
+#      username : unicode
+#          username added to message headers.  The default is to ask the OS.
+#      key : bytes
+#          The key used to initialize an HMAC signature.  If unset, messages
+#          will not be signed or checked.
+#      keyfile : filepath
+#          The file containing a key.  If this is set, `key` will be initialized
+#          to the contents of the file.
 
-# # Object for handling serialization and sending of messages.
-#
-#  The Session object handles building messages and sending them with ZMQ sockets
-#  or ZMQStream objects.  Objects can communicate with each other over the
-#  network via Session objects, and only need to work with the dict-based IPython
-#  message spec. The Session will handle serialization/deserialization, security,
-#  and metadata.
-#
-#  Sessions support configurable serialization via packer/unpacker traits, and
-#  signing with HMAC digests via the key/keyfile traits.
-#
-#  Parameters ----------
-#
-#  debug : bool
-#      whether to trigger extra debugging statements
-#  packer/unpacker : str : 'json', 'pickle' or import_string
-#      importstrings for methods to serialize message parts.  If just
-#      'json' or 'pickle', predefined JSON and pickle packers will be used.
-#      Otherwise, the entire importstring must be used.
-#
-#      The functions must accept at least valid JSON input, and output *bytes*.
-#
-#      For example, to use msgpack:
-#      packer = 'msgpack.packb', unpacker='msgpack.unpackb'
-#  pack/unpack : callables
-#      You can also set the pack/unpack callables for serialization directly.
-#  session : bytes
-#      the ID of this Session object.  The default is to generate a new UUID.
-#  username : unicode
-#      username added to message headers.  The default is to ask the OS.
-#  key : bytes
-#      The key used to initialize an HMAC signature.  If unset, messages
-#      will not be signed or checked.
-#  keyfile : filepath
-#      The file containing a key.  If this is set, `key` will be initialized
-#      to the contents of the file.
-
-# # Threshold (in bytes) beyond which an object's buffer should be extracted to
+## Threshold (in bytes) beyond which an object's buffer should be extracted to
 #  avoid pickling.
+#  Default: 1024
 # c.Session.buffer_threshold = 1024
 
-# # Whether to check PID to protect against calls after fork.
+## Whether to check PID to protect against calls after fork.
 #
-#  This check can be disabled if fork-safety is handled elsewhere.
+#          This check can be disabled if fork-safety is handled elsewhere.
+#  Default: True
 # c.Session.check_pid = True
 
-# # Threshold (in bytes) beyond which a buffer should be sent without copying.
+## Threshold (in bytes) beyond which a buffer should be sent without copying.
+#  Default: 65536
 # c.Session.copy_threshold = 65536
 
-# # Debug output in the Session
+## Debug output in the Session
+#  Default: False
 # c.Session.debug = False
 
-# # The maximum number of digests to remember.
+## The maximum number of digests to remember.
 #
-#  The digest history will be culled when it exceeds this value.
+#          The digest history will be culled when it exceeds this value.
+#  Default: 65536
 # c.Session.digest_history_size = 65536
 
-# # The maximum number of items for a container to be introspected for custom
-#  serialization. Containers larger than this are pickled outright.
+## The maximum number of items for a container to be introspected for custom serialization.
+#          Containers larger than this are pickled outright.
+#  Default: 64
 # c.Session.item_threshold = 64
 
-# # execution key, for signing messages.
+## execution key, for signing messages.
+#  Default: b''
 # c.Session.key = b''
 
-# # path to file containing execution key.
+## path to file containing execution key.
+#  Default: ''
 # c.Session.keyfile = ''
 
-# # Metadata dictionary, which serves as the default top-level metadata dict for
+## Metadata dictionary, which serves as the default top-level metadata dict for
 #  each message.
+#  Default: {}
 # c.Session.metadata = {}
 
-# # The name of the packer for serializing messages. Should be one of 'json',
-#  'pickle', or an import name for a custom callable serializer.
+## The name of the packer for serializing messages.
+#              Should be one of 'json', 'pickle', or an import name
+#              for a custom callable serializer.
+#  Default: 'json'
 # c.Session.packer = 'json'
 
-# # The UUID identifying this session.
+## The UUID identifying this session.
+#  Default: ''
 # c.Session.session = ''
 
-# # The digest scheme used to construct the message signatures. Must have the form
-#  'hmac-HASH'.
+## The digest scheme used to construct the message signatures.
+#          Must have the form 'hmac-HASH'.
+#  Default: 'hmac-sha256'
 # c.Session.signature_scheme = 'hmac-sha256'
 
-# # The name of the unpacker for unserializing messages. Only used with custom
-#  functions for `packer`.
+## The name of the unpacker for unserializing messages.
+#          Only used with custom functions for `packer`.
+#  Default: 'json'
 # c.Session.unpacker = 'json'
 
-# # Username for the Session. Default is your system username.
-# c.Session.username = 'root'
+## Username for the Session. Default is your system username.
+#  Default: 'richard.panek'
+# c.Session.username = 'richard.panek'
 
-# ------------------------------------------------------------------------------
+#------------------------------------------------------------------------------
 # MultiKernelManager(LoggingConfigurable) configuration
-# ------------------------------------------------------------------------------
+#------------------------------------------------------------------------------
+## A class for managing multiple kernels.
 
-# # A class for managing multiple kernels.
-
-# # The name of the default kernel to start
+## The name of the default kernel to start
+#  Default: 'python3'
 # c.MultiKernelManager.default_kernel_name = 'python3'
 
-# # The kernel manager class.  This is configurable to allow subclassing of the
-#  KernelManager for customized behavior.
+## The kernel manager class.  This is configurable to allow
+#          subclassing of the KernelManager for customized behavior.
+#  Default: 'jupyter_client.ioloop.IOLoopKernelManager'
 # c.MultiKernelManager.kernel_manager_class = 'jupyter_client.ioloop.IOLoopKernelManager'
 
-# ------------------------------------------------------------------------------
+## Share a single zmq.Context to talk to all my kernels
+#  Default: True
+# c.MultiKernelManager.shared_context = True
+
+#------------------------------------------------------------------------------
 # MappingKernelManager(MultiKernelManager) configuration
-# ------------------------------------------------------------------------------
+#------------------------------------------------------------------------------
+## A KernelManager that handles notebook mapping and HTTP error handling
 
-# # A KernelManager that handles notebook mapping and HTTP error handling
+## White list of allowed kernel message types.
+#          When the list is empty, all message types are allowed.
+#  Default: []
+# c.MappingKernelManager.allowed_message_types = []
 
-# #
+## Whether messages from kernels whose frontends have disconnected should be buffered in-memory.
+#          When True (default), messages are buffered and replayed on reconnect,
+#          avoiding lost messages due to interrupted connectivity.
+#          Disable if long-running kernels will produce too much output while
+#          no frontends are connected.
+#  Default: True
+# c.MappingKernelManager.buffer_offline_messages = True
+
+## Whether to consider culling kernels which are busy.
+#          Only effective if cull_idle_timeout > 0.
+#  Default: False
+# c.MappingKernelManager.cull_busy = False
+
+## Whether to consider culling kernels which have one or more connections.
+#          Only effective if cull_idle_timeout > 0.
+#  Default: False
+# c.MappingKernelManager.cull_connected = False
+
+## Timeout (in seconds) after which a kernel is considered idle and ready to be culled.
+#          Values of 0 or lower disable culling. Very short timeouts may result in kernels being culled
+#          for users with poor network connections.
+#  Default: 0
+# c.MappingKernelManager.cull_idle_timeout = 0
+
+## The interval (in seconds) on which to check for idle kernels exceeding the
+#  cull timeout value.
+#  Default: 300
+# c.MappingKernelManager.cull_interval = 300
+
+## The name of the default kernel to start
+#  See also: MultiKernelManager.default_kernel_name
+# c.MappingKernelManager.default_kernel_name = 'python3'
+
+## Timeout for giving up on a kernel (in seconds).
+#          On starting and restarting kernels, we check whether the
+#          kernel is running and responsive by sending kernel_info_requests.
+#          This sets the timeout in seconds for how long the kernel can take
+#          before being presumed dead.
+#          This affects the MappingKernelManager (which handles kernel restarts)
+#          and the ZMQChannelsHandler (which handles the startup).
+#  Default: 60
+# c.MappingKernelManager.kernel_info_timeout = 60
+
+## The kernel manager class.  This is configurable to allow
+#  See also: MultiKernelManager.kernel_manager_class
+# c.MappingKernelManager.kernel_manager_class = 'jupyter_client.ioloop.IOLoopKernelManager'
+
+#  Default: ''
 # c.MappingKernelManager.root_dir = ''
 
-# ------------------------------------------------------------------------------
+## Share a single zmq.Context to talk to all my kernels
+#  See also: MultiKernelManager.shared_context
+# c.MappingKernelManager.shared_context = True
+
+#------------------------------------------------------------------------------
+# KernelSpecManager(LoggingConfigurable) configuration
+#------------------------------------------------------------------------------
+## List of allowed kernel names.
+#
+#          By default, all installed kernels are allowed.
+#  Default: set()
+# c.KernelSpecManager.allowed_kernelspecs = set()
+
+## If there is no Python kernelspec registered and the IPython
+#          kernel is available, ensure it is added to the spec list.
+#  Default: True
+# c.KernelSpecManager.ensure_native_kernel = True
+
+## The kernel spec class.  This is configurable to allow
+#          subclassing of the KernelSpecManager for customized behavior.
+#  Default: 'jupyter_client.kernelspec.KernelSpec'
+# c.KernelSpecManager.kernel_spec_class = 'jupyter_client.kernelspec.KernelSpec'
+
+## Deprecated, use `KernelSpecManager.allowed_kernelspecs`
+#  Default: set()
+# c.KernelSpecManager.whitelist = set()
+
+#------------------------------------------------------------------------------
 # ContentsManager(LoggingConfigurable) configuration
-# ------------------------------------------------------------------------------
+#------------------------------------------------------------------------------
+## Base class for serving files and directories.
+#
+#      This serves any text or binary file,
+#      as well as directories,
+#      with special handling for JSON notebook documents.
+#
+#      Most APIs take a path argument,
+#      which is always an API-style unicode path,
+#      and always refers to a directory.
+#
+#      - unicode, not url-escaped
+#      - '/'-separated
+#      - leading and trailing '/' will be stripped
+#      - if unspecified, path defaults to '',
+#        indicating the root path.
 
-# # Base class for serving files and directories.
-#
-#  This serves any text or binary file, as well as directories, with special
-#  handling for JSON notebook documents.
-#
-#  Most APIs take a path argument, which is always an API-style unicode path, and
-#  always refers to a directory.
-#
-#  - unicode, not url-escaped
-#  - '/'-separated
-#  - leading and trailing '/' will be stripped
-#  - if unspecified, path defaults to '',
-#    indicating the root path.
+## Allow access to hidden files
+#  Default: False
+# c.ContentsManager.allow_hidden = False
 
-# #
+#  Default: None
 # c.ContentsManager.checkpoints = None
 
-# #
+#  Default: 'notebook.services.contents.checkpoints.Checkpoints'
 # c.ContentsManager.checkpoints_class = 'notebook.services.contents.checkpoints.Checkpoints'
 
-# #
+#  Default: {}
 # c.ContentsManager.checkpoints_kwargs = {}
 
-# # Glob patterns to hide in file and directory listings.
+## handler class to use when serving raw file requests.
+#
+#          Default is a fallback that talks to the ContentsManager API,
+#          which may be inefficient, especially for large files.
+#
+#          Local files-based ContentsManagers can use a StaticFileHandler subclass,
+#          which will be much more efficient.
+#
+#          Access to these files should be Authenticated.
+#  Default: 'notebook.files.handlers.FilesHandler'
+# c.ContentsManager.files_handler_class = 'notebook.files.handlers.FilesHandler'
+
+## Extra parameters to pass to files_handler_class.
+#
+#          For example, StaticFileHandlers generally expect a `path` argument
+#          specifying the root directory from which to serve files.
+#  Default: {}
+# c.ContentsManager.files_handler_params = {}
+
+## Glob patterns to hide in file and directory listings.
+#  Default: ['__pycache__', '*.pyc', '*.pyo', '.DS_Store', '*.so', '*.dylib', '*~']
 # c.ContentsManager.hide_globs = ['__pycache__', '*.pyc', '*.pyo', '.DS_Store', '*.so', '*.dylib', '*~']
 
-# # Python callable or importstring thereof
+## Python callable or importstring thereof
 #
-#  To be called on a contents model prior to save.
+#          To be called on a contents model prior to save.
 #
-#  This can be used to process the structure, such as removing notebook outputs
-#  or other side effects that should not be saved.
+#          This can be used to process the structure,
+#          such as removing notebook outputs or other side effects that
+#          should not be saved.
 #
-#  It will be called as (all arguments passed by keyword)::
+#          It will be called as (all arguments passed by keyword)::
 #
-#      hook(path=path, model=model, contents_manager=self)
+#              hook(path=path, model=model, contents_manager=self)
 #
-#  - model: the model to be saved. Includes file contents.
-#    Modifying this dict will affect the file that is stored.
-#  - path: the API path of the save destination
-#  - contents_manager: this ContentsManager instance
+#          - model: the model to be saved. Includes file contents.
+#            Modifying this dict will affect the file that is stored.
+#          - path: the API path of the save destination
+#          - contents_manager: this ContentsManager instance
+#  Default: None
 # c.ContentsManager.pre_save_hook = None
 
-# # The base name used when creating untitled directories.
+#  Default: '/'
+# c.ContentsManager.root_dir = '/'
+
+## The base name used when creating untitled directories.
+#  Default: 'Untitled Folder'
 # c.ContentsManager.untitled_directory = 'Untitled Folder'
 
-# # The base name used when creating untitled files.
+## The base name used when creating untitled files.
+#  Default: 'untitled'
 # c.ContentsManager.untitled_file = 'untitled'
 
-# # The base name used when creating untitled notebooks.
+## The base name used when creating untitled notebooks.
+#  Default: 'Untitled'
 # c.ContentsManager.untitled_notebook = 'Untitled'
 
-# ------------------------------------------------------------------------------
+#------------------------------------------------------------------------------
 # FileManagerMixin(Configurable) configuration
-# ------------------------------------------------------------------------------
-
-# # Mixin for ContentsAPI classes that interact with the filesystem.
+#------------------------------------------------------------------------------
+## Mixin for ContentsAPI classes that interact with the filesystem.
 #
 #  Provides facilities for reading, writing, and copying both notebooks and
 #  generic files.
@@ -1154,80 +989,380 @@ c.FileContentsManager.root_dir = '/'
 #  Note ---- Classes using this mixin must provide the following attributes:
 #
 #  root_dir : unicode
-#      A directory against against which API-style paths are to be resolved.
+#      A directory against which API-style paths are to be resolved.
 #
 #  log : logging.Logger
 
-# # By default notebooks are saved on disk on a temporary file and then if
-#  succefully written, it replaces the old ones. This procedure, namely
-#  'atomic_writing', causes some bugs on file system whitout operation order
-#  enforcement (like some networked fs). If set to False, the new notebook is
-#  written directly on the old one which could fail (eg: full filesystem or quota
-#  )
+## By default notebooks are saved on disk on a temporary file and then if successfully written, it replaces the old ones.
+#        This procedure, namely 'atomic_writing', causes some bugs on file system without operation order enforcement (like some networked fs).
+#        If set to False, the new notebook is written directly on the old one which could fail (eg: full filesystem or quota )
+#  Default: True
 # c.FileManagerMixin.use_atomic_writing = True
 
-# ------------------------------------------------------------------------------
-# FileContentsManager(FileManagerMixin,ContentsManager) configuration
-# ------------------------------------------------------------------------------
+#------------------------------------------------------------------------------
+# FileContentsManager(FileManagerMixin, ContentsManager) configuration
+#------------------------------------------------------------------------------
+## Allow access to hidden files
+#  See also: ContentsManager.allow_hidden
+# c.FileContentsManager.allow_hidden = False
 
-# # Python callable or importstring thereof
+#  See also: ContentsManager.checkpoints
+# c.FileContentsManager.checkpoints = None
+
+#  See also: ContentsManager.checkpoints_class
+# c.FileContentsManager.checkpoints_class = 'notebook.services.contents.checkpoints.Checkpoints'
+
+#  See also: ContentsManager.checkpoints_kwargs
+# c.FileContentsManager.checkpoints_kwargs = {}
+
+## If True (default), deleting files will send them to the
+#          platform's trash/recycle bin, where they can be recovered. If False,
+#          deleting files really deletes them.
+#  Default: True
+# c.FileContentsManager.delete_to_trash = True
+
+## handler class to use when serving raw file requests.
+#  See also: ContentsManager.files_handler_class
+# c.FileContentsManager.files_handler_class = 'notebook.files.handlers.FilesHandler'
+
+## Extra parameters to pass to files_handler_class.
+#  See also: ContentsManager.files_handler_params
+# c.FileContentsManager.files_handler_params = {}
+
+##
+#  See also: ContentsManager.hide_globs
+# c.FileContentsManager.hide_globs = ['__pycache__', '*.pyc', '*.pyo', '.DS_Store', '*.so', '*.dylib', '*~']
+
+## Python callable or importstring thereof
 #
-#  to be called on the path of a file just saved.
+#          to be called on the path of a file just saved.
 #
-#  This can be used to process the file on disk, such as converting the notebook
-#  to a script or HTML via nbconvert.
+#          This can be used to process the file on disk,
+#          such as converting the notebook to a script or HTML via nbconvert.
 #
-#  It will be called as (all arguments passed by keyword)::
+#          It will be called as (all arguments passed by keyword)::
 #
-#      hook(os_path=os_path, model=model, contents_manager=instance)
+#              hook(os_path=os_path, model=model, contents_manager=instance)
 #
-#  - path: the filesystem path to the file just written - model: the model
-#  representing the file - contents_manager: this ContentsManager instance
+#          - path: the filesystem path to the file just written
+#          - model: the model representing the file
+#          - contents_manager: this ContentsManager instance
+#  Default: None
 # c.FileContentsManager.post_save_hook = None
 
-# #
-# c.FileContentsManager.root_dir = './notebooks/'
+## Python callable or importstring thereof
+#  See also: ContentsManager.pre_save_hook
+# c.FileContentsManager.pre_save_hook = None
 
-# # DEPRECATED, use post_save_hook. Will be removed in Notebook 5.0
+#  Default: ''
+c.FileContentsManager.root_dir = '/'
+
+## DEPRECATED, use post_save_hook. Will be removed in Notebook 5.0
+#  Default: False
 # c.FileContentsManager.save_script = False
 
-# ------------------------------------------------------------------------------
+## The base name used when creating untitled directories.
+#  See also: ContentsManager.untitled_directory
+# c.FileContentsManager.untitled_directory = 'Untitled Folder'
+
+## The base name used when creating untitled files.
+#  See also: ContentsManager.untitled_file
+# c.FileContentsManager.untitled_file = 'untitled'
+
+## The base name used when creating untitled notebooks.
+#  See also: ContentsManager.untitled_notebook
+# c.FileContentsManager.untitled_notebook = 'Untitled'
+
+## By default notebooks are saved on disk on a temporary file and then if
+#  successfully written, it replaces the old ones.
+#  See also: FileManagerMixin.use_atomic_writing
+# c.FileContentsManager.use_atomic_writing = True
+
+#------------------------------------------------------------------------------
 # NotebookNotary(LoggingConfigurable) configuration
-# ------------------------------------------------------------------------------
+#------------------------------------------------------------------------------
+## A class for computing and verifying notebook signatures.
 
-# # A class for computing and verifying notebook signatures.
-
-# # The hashing algorithm used to sign notebooks.
+## The hashing algorithm used to sign notebooks.
+#  Choices: any of ['sha3_384', 'sha256', 'sha384', 'sha3_512', 'sha224', 'sha3_224', 'sha1', 'blake2b', 'blake2s', 'md5', 'sha3_256', 'sha512']
+#  Default: 'sha256'
 # c.NotebookNotary.algorithm = 'sha256'
 
-# # The sqlite file in which to store notebook signatures. By default, this will
-#  be in your Jupyter data directory. You can set it to ':memory:' to disable
-#  sqlite writing to the filesystem.
+## The storage directory for notary secret and database.
+#  Default: ''
+# c.NotebookNotary.data_dir = ''
+
+## The sqlite file in which to store notebook signatures.
+#          By default, this will be in your Jupyter data directory.
+#          You can set it to ':memory:' to disable sqlite writing to the filesystem.
+#  Default: ''
 # c.NotebookNotary.db_file = ''
 
-# # The secret key with which notebooks are signed.
+## The secret key with which notebooks are signed.
+#  Default: b''
 # c.NotebookNotary.secret = b''
 
-# # The file where the secret key is stored.
+## The file where the secret key is stored.
+#  Default: ''
 # c.NotebookNotary.secret_file = ''
 
-# # A callable returning the storage backend for notebook signatures. The default
-#  uses an SQLite database.
+## A callable returning the storage backend for notebook signatures.
+#           The default uses an SQLite database.
+#  Default: traitlets.Undefined
 # c.NotebookNotary.store_factory = traitlets.Undefined
 
-# ------------------------------------------------------------------------------
-# KernelSpecManager(LoggingConfigurable) configuration
-# ------------------------------------------------------------------------------
+#------------------------------------------------------------------------------
+# AsyncMultiKernelManager(MultiKernelManager) configuration
+#------------------------------------------------------------------------------
+## The name of the default kernel to start
+#  See also: MultiKernelManager.default_kernel_name
+# c.AsyncMultiKernelManager.default_kernel_name = 'python3'
 
-# # If there is no Python kernelspec registered and the IPython kernel is
-#  available, ensure it is added to the spec list.
-# c.KernelSpecManager.ensure_native_kernel = True
+## The kernel manager class.  This is configurable to allow
+#          subclassing of the AsyncKernelManager for customized behavior.
+#  Default: 'jupyter_client.ioloop.AsyncIOLoopKernelManager'
+# c.AsyncMultiKernelManager.kernel_manager_class = 'jupyter_client.ioloop.AsyncIOLoopKernelManager'
 
-# # The kernel spec class.  This is configurable to allow subclassing of the
-#  KernelSpecManager for customized behavior.
-# c.KernelSpecManager.kernel_spec_class = 'jupyter_client.kernelspec.KernelSpec'
+## Share a single zmq.Context to talk to all my kernels
+#  See also: MultiKernelManager.shared_context
+# c.AsyncMultiKernelManager.shared_context = True
 
-# # Whitelist of allowed kernel names.
-#
-#  By default, all installed kernels are allowed.
-# c.KernelSpecManager.whitelist = set()
+#------------------------------------------------------------------------------
+# AsyncMappingKernelManager(MappingKernelManager, AsyncMultiKernelManager) configuration
+#------------------------------------------------------------------------------
+## White list of allowed kernel message types.
+#  See also: MappingKernelManager.allowed_message_types
+# c.AsyncMappingKernelManager.allowed_message_types = []
+
+## Whether messages from kernels whose frontends have disconnected should be
+#  buffered in-memory.
+#  See also: MappingKernelManager.buffer_offline_messages
+# c.AsyncMappingKernelManager.buffer_offline_messages = True
+
+## Whether to consider culling kernels which are busy.
+#  See also: MappingKernelManager.cull_busy
+# c.AsyncMappingKernelManager.cull_busy = False
+
+## Whether to consider culling kernels which have one or more connections.
+#  See also: MappingKernelManager.cull_connected
+# c.AsyncMappingKernelManager.cull_connected = False
+
+## Timeout (in seconds) after which a kernel is considered idle and ready to be
+#  culled.
+#  See also: MappingKernelManager.cull_idle_timeout
+# c.AsyncMappingKernelManager.cull_idle_timeout = 0
+
+## The interval (in seconds) on which to check for idle kernels exceeding the
+#  cull timeout value.
+#  See also: MappingKernelManager.cull_interval
+# c.AsyncMappingKernelManager.cull_interval = 300
+
+## The name of the default kernel to start
+#  See also: MultiKernelManager.default_kernel_name
+# c.AsyncMappingKernelManager.default_kernel_name = 'python3'
+
+## Timeout for giving up on a kernel (in seconds).
+#  See also: MappingKernelManager.kernel_info_timeout
+# c.AsyncMappingKernelManager.kernel_info_timeout = 60
+
+## The kernel manager class.  This is configurable to allow
+#  See also: AsyncMultiKernelManager.kernel_manager_class
+# c.AsyncMappingKernelManager.kernel_manager_class = 'jupyter_client.ioloop.AsyncIOLoopKernelManager'
+
+#  See also: MappingKernelManager.root_dir
+# c.AsyncMappingKernelManager.root_dir = ''
+
+## Share a single zmq.Context to talk to all my kernels
+#  See also: MultiKernelManager.shared_context
+# c.AsyncMappingKernelManager.shared_context = True
+
+#------------------------------------------------------------------------------
+# GatewayKernelManager(AsyncMappingKernelManager) configuration
+#------------------------------------------------------------------------------
+## Kernel manager that supports remote kernels hosted by Jupyter Kernel or
+#  Enterprise Gateway.
+
+## White list of allowed kernel message types.
+#  See also: MappingKernelManager.allowed_message_types
+# c.GatewayKernelManager.allowed_message_types = []
+
+## Whether messages from kernels whose frontends have disconnected should be
+#  buffered in-memory.
+#  See also: MappingKernelManager.buffer_offline_messages
+# c.GatewayKernelManager.buffer_offline_messages = True
+
+## Whether to consider culling kernels which are busy.
+#  See also: MappingKernelManager.cull_busy
+# c.GatewayKernelManager.cull_busy = False
+
+## Whether to consider culling kernels which have one or more connections.
+#  See also: MappingKernelManager.cull_connected
+# c.GatewayKernelManager.cull_connected = False
+
+## Timeout (in seconds) after which a kernel is considered idle and ready to be
+#  culled.
+#  See also: MappingKernelManager.cull_idle_timeout
+# c.GatewayKernelManager.cull_idle_timeout = 0
+
+## The interval (in seconds) on which to check for idle kernels exceeding the
+#  cull timeout value.
+#  See also: MappingKernelManager.cull_interval
+# c.GatewayKernelManager.cull_interval = 300
+
+## The name of the default kernel to start
+#  See also: MultiKernelManager.default_kernel_name
+# c.GatewayKernelManager.default_kernel_name = 'python3'
+
+## Timeout for giving up on a kernel (in seconds).
+#  See also: MappingKernelManager.kernel_info_timeout
+# c.GatewayKernelManager.kernel_info_timeout = 60
+
+## The kernel manager class.  This is configurable to allow
+#  See also: AsyncMultiKernelManager.kernel_manager_class
+# c.GatewayKernelManager.kernel_manager_class = 'jupyter_client.ioloop.AsyncIOLoopKernelManager'
+
+#  See also: MappingKernelManager.root_dir
+# c.GatewayKernelManager.root_dir = ''
+
+## Share a single zmq.Context to talk to all my kernels
+#  See also: MultiKernelManager.shared_context
+# c.GatewayKernelManager.shared_context = True
+
+#------------------------------------------------------------------------------
+# GatewayKernelSpecManager(KernelSpecManager) configuration
+#------------------------------------------------------------------------------
+## List of allowed kernel names.
+#  See also: KernelSpecManager.allowed_kernelspecs
+# c.GatewayKernelSpecManager.allowed_kernelspecs = set()
+
+## If there is no Python kernelspec registered and the IPython
+#  See also: KernelSpecManager.ensure_native_kernel
+# c.GatewayKernelSpecManager.ensure_native_kernel = True
+
+## The kernel spec class.  This is configurable to allow
+#  See also: KernelSpecManager.kernel_spec_class
+# c.GatewayKernelSpecManager.kernel_spec_class = 'jupyter_client.kernelspec.KernelSpec'
+
+## Deprecated, use `KernelSpecManager.allowed_kernelspecs`
+#  See also: KernelSpecManager.whitelist
+# c.GatewayKernelSpecManager.whitelist = set()
+
+#------------------------------------------------------------------------------
+# GatewayClient(SingletonConfigurable) configuration
+#------------------------------------------------------------------------------
+## This class manages the configuration.  It's its own singleton class so that we
+#         can share these values across all objects.  It also contains some helper methods
+#         to build request arguments out of the various config options.
+
+## The authorization token used in the HTTP headers.  (JUPYTER_GATEWAY_AUTH_TOKEN
+#  env var)
+#  Default: None
+# c.GatewayClient.auth_token = None
+
+## The filename of CA certificates or None to use defaults.
+#  (JUPYTER_GATEWAY_CA_CERTS env var)
+#  Default: None
+# c.GatewayClient.ca_certs = None
+
+## The filename for client SSL certificate, if any.  (JUPYTER_GATEWAY_CLIENT_CERT
+#  env var)
+#  Default: None
+# c.GatewayClient.client_cert = None
+
+## The filename for client SSL key, if any.  (JUPYTER_GATEWAY_CLIENT_KEY env var)
+#  Default: None
+# c.GatewayClient.client_key = None
+
+## The time allowed for HTTP connection establishment with the Gateway server.
+#          (JUPYTER_GATEWAY_CONNECT_TIMEOUT env var)
+#  Default: 40.0
+# c.GatewayClient.connect_timeout = 40.0
+
+## A comma-separated list of environment variable names that will be included, along with
+#           their values, in the kernel startup request.  The corresponding `env_whitelist` configuration
+#           value must also be set on the Gateway server - since that configuration value indicates which
+#           environmental values to make available to the kernel. (JUPYTER_GATEWAY_ENV_WHITELIST env var)
+#  Default: ''
+# c.GatewayClient.env_whitelist = ''
+
+## The time allowed for HTTP reconnection with the Gateway server for the first time.
+#                  Next will be JUPYTER_GATEWAY_RETRY_INTERVAL multiplied by two in factor of numbers of retries
+#                  but less than JUPYTER_GATEWAY_RETRY_INTERVAL_MAX.
+#                  (JUPYTER_GATEWAY_RETRY_INTERVAL env var)
+#  Default: 1.0
+# c.GatewayClient.gateway_retry_interval = 1.0
+
+## The maximum time allowed for HTTP reconnection retry with the Gateway server.
+#                  (JUPYTER_GATEWAY_RETRY_INTERVAL_MAX env var)
+#  Default: 30.0
+# c.GatewayClient.gateway_retry_interval_max = 30.0
+
+## The maximum retries allowed for HTTP reconnection with the Gateway server.
+#                  (JUPYTER_GATEWAY_RETRY_MAX env var)
+#  Default: 5
+# c.GatewayClient.gateway_retry_max = 5
+
+## Additional HTTP headers to pass on the request.  This value will be converted to a dict.
+#            (JUPYTER_GATEWAY_HEADERS env var)
+#  Default: '{}'
+# c.GatewayClient.headers = '{}'
+
+## The password for HTTP authentication.  (JUPYTER_GATEWAY_HTTP_PWD env var)
+#  Default: None
+# c.GatewayClient.http_pwd = None
+
+## The username for HTTP authentication. (JUPYTER_GATEWAY_HTTP_USER env var)
+#  Default: None
+# c.GatewayClient.http_user = None
+
+## The gateway API endpoint for accessing kernel resources
+#  (JUPYTER_GATEWAY_KERNELS_ENDPOINT env var)
+#  Default: '/api/kernels'
+# c.GatewayClient.kernels_endpoint = '/api/kernels'
+
+## The gateway API endpoint for accessing kernelspecs
+#  (JUPYTER_GATEWAY_KERNELSPECS_ENDPOINT env var)
+#  Default: '/api/kernelspecs'
+# c.GatewayClient.kernelspecs_endpoint = '/api/kernelspecs'
+
+## The gateway endpoint for accessing kernelspecs resources
+#              (JUPYTER_GATEWAY_KERNELSPECS_RESOURCE_ENDPOINT env var)
+#  Default: '/kernelspecs'
+# c.GatewayClient.kernelspecs_resource_endpoint = '/kernelspecs'
+
+## The time allowed for HTTP request completion. (JUPYTER_GATEWAY_REQUEST_TIMEOUT
+#  env var)
+#  Default: 40.0
+# c.GatewayClient.request_timeout = 40.0
+
+## The url of the Kernel or Enterprise Gateway server where
+#          kernel specifications are defined and kernel management takes place.
+#          If defined, this Notebook server acts as a proxy for all kernel
+#          management and kernel specification retrieval.  (JUPYTER_GATEWAY_URL env var)
+#  Default: None
+# c.GatewayClient.url = None
+
+## For HTTPS requests, determines if server's certificate should be validated or not.
+#          (JUPYTER_GATEWAY_VALIDATE_CERT env var)
+#  Default: True
+# c.GatewayClient.validate_cert = True
+
+## The websocket url of the Kernel or Enterprise Gateway server.  If not provided, this value
+#          will correspond to the value of the Gateway url with 'ws' in place of 'http'.  (JUPYTER_GATEWAY_WS_URL env var)
+#  Default: None
+# c.GatewayClient.ws_url = None
+
+#------------------------------------------------------------------------------
+# TerminalManager(LoggingConfigurable) configuration
+#------------------------------------------------------------------------------
+##
+
+## Timeout (in seconds) in which a terminal has been inactive and ready to be culled.
+#          Values of 0 or lower disable culling.
+#  Default: 0
+# c.TerminalManager.cull_inactive_timeout = 0
+
+## The interval (in seconds) on which to check for terminals exceeding the
+#  inactive timeout value.
+#  Default: 300
+# c.TerminalManager.cull_interval = 300
