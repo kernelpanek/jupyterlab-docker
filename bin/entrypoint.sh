@@ -11,12 +11,12 @@ if [[ -v GIT_URL ]]; then
   git clone $GIT_URL /notebooks
 fi
 
-if [ -f /notebooks/packages.txt ]; then
-  echo "INFO: Found packages.txt file in folder /notebooks. Executing it to install apt packages."
+if [ -f /notebooks/aptpackages.txt ]; then
+  echo "INFO: Found aptpackages.txt file in folder /notebooks. Installing via \"apt-get install -y\""
   apt-get update
-  cat packages.txt | xargs apt-get install -y
+  cat aptpackages.txt | xargs apt-get install -y
 else
-  echo "INFO: packages.txt not found in folder /notebooks --> Continuing"
+  echo "INFO: aptpackages.txt not found in folder /notebooks --> Continuing"
 fi
 
 if [ -f /notebooks/requirements.txt ]; then
