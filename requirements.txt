@@ -33,7 +33,7 @@ ipyscales
 ipython
 ipython-genutils
 ipywidgets
-jedi
+jedi==0.17.2
 jenkinsapi
 Jinja2
 jira
@@ -42,21 +42,22 @@ jsonpatch
 jsonpickle
 jsonpointer
 jsonschema
-jupyter
-jupyter-client
-jupyter-console
+# jupyter
+# jupyter-client
+# jupyter-console
 jupyter-contrib-core
 jupyter-contrib-nbextensions
-jupyter-core
-jupyter-highlight-selected-word
-jupyter-js-widgets-nbextension
-jupyter-latex-envs
-jupyter-nbextensions-configurator
-jupyter-notebook-gist
+# jupyter-core
+# jupyter-highlight-selected-word
+# jupyter-js-widgets-nbextension
+# jupyter-latex-envs
+# jupyter-nbextensions-configurator
+# jupyter-notebook-gist
 jupyterlab==3.3.4
 jupyterlab_code_formatter==1.4.10
 jupyterlab_git
 jupyterlab_latex
+jupyterlab-lsp
 jupyterthemes
 kubernetes
 matplotlib
@@ -100,6 +101,7 @@ pytest-cov
 pytest-xdist
 python-dateutil
 python-jose
+python-lsp-server[all]
 pythreejs
 pytz
 pyyaml

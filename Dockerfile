@@ -41,6 +41,7 @@ RUN jupyter labextension install \
     @finos/perspective-jupyterlab \
     @jupyterlab/git \
     @ryantam626/jupyterlab_code_formatter@1.4.10 \
+    @krassowski/jupyterlab-lsp \
     jupyterlab-datawidgets \
     jupyterlab-scales \
     jupyter-threejs
