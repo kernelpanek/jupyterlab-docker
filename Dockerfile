@@ -11,10 +11,12 @@ RUN curl -sL https://deb.nodesource.com/setup_14.x | bash - && \
   rm -rf /var/lib/apt/lists/*
 
 # install boost
-RUN wget https://boostorg.jfrog.io/artifactory/main/release/1.71.0/source/boost_1_71_0.tar.gz --no-check-certificate >/dev/null 2>&1
-RUN tar xfz boost_1_71_0.tar.gz
-RUN cd boost_1_71_0 && ./bootstrap.sh
-RUN cd boost_1_71_0 && ./b2 -j8 --with-program_options --with-filesystem --with-system install
+RUN wget https://boostorg.jfrog.io/artifactory/main/release/1.71.0/source/boost_1_71_0.tar.gz --no-check-certificate >/dev/null 2>&1 && \
+    tar xfz boost_1_71_0.tar.gz && \
+    cd boost_1_71_0 && \
+    ./bootstrap.sh && \
+    ./b2 -j8 --with-program_options --with-filesystem --with-system install && \
+    rm -rf /boost_1_71_0*
 
 # install flatbuffers
 RUN mkdir -p /usr/local \
@@ -30,7 +32,8 @@ RUN mkdir -p /usr/local \
 COPY requirements.txt requirements.txt
 
 RUN pip install --upgrade pip && \
-  pip install -r requirements.txt
+    pip install -r requirements.txt && \
+    rm -rf /root/.cache/pip
 
 
 RUN rm -rf /usr/local/share/jupyter/lab/extensions/ /usr/local/share/jupyter/labextensions/
@@ -44,7 +47,8 @@ RUN jupyter labextension install \
     @krassowski/jupyterlab-lsp \
     jupyterlab-datawidgets \
     jupyterlab-scales \
-    jupyter-threejs
+    jupyter-threejs \
+    dask-labextension
 
 COPY bin/entrypoint.sh /usr/local/bin/
 COPY config/ /root/.jupyter/

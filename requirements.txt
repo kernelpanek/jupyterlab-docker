@@ -8,7 +8,8 @@ colorama
 cloudpickle
 crayons
 cufflinks
-dask
+dask[complete]
+dask-labextension
 dill
 docutils
 dothub
