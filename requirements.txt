@@ -11,6 +11,7 @@ cufflinks
 dask[complete]
 dask-labextension
 dill
+docker
 docutils
 dothub
 formulaic
@@ -114,6 +115,7 @@ requests-html
 requests-oauthlib
 requests-toolbelt
 rsa
+ruamel.yaml
 scikit-learn
 simplejson
 six
