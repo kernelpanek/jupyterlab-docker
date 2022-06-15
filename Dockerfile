@@ -39,14 +39,14 @@ RUN pip install --upgrade pip && \
 RUN rm -rf /usr/local/share/jupyter/lab/extensions/ /usr/local/share/jupyter/labextensions/
 RUN jupyter lab clean
 RUN jupyter labextension install \
-    @jupyter-widgets/jupyterlab-manager \
-    @jupyter-widgets/jupyterlab-sidecar \
-    @finos/perspective-jupyterlab \
-    @jupyterlab/git \
+    @jupyter-widgets/jupyterlab-manager@3.1.0 \
+    @jupyter-widgets/jupyterlab-sidecar@0.6.1 \
+    @finos/perspective-jupyterlab@1.3.13 \
+    @jupyterlab/git@0.37.1 \
     @ryantam626/jupyterlab_code_formatter@1.4.10 \
-    @krassowski/jupyterlab-lsp \
-    jupyter-threejs \
-    dask-labextension
+    @krassowski/jupyterlab-lsp@3.10.1 \
+    jupyter-threejs@2.3.0 \
+    dask-labextension@5.2.0
 
 COPY bin/entrypoint.sh /usr/local/bin/
 COPY config/ /root/.jupyter/
