@@ -1,4 +1,5 @@
-FROM python:3
+ARG BASE_IMAGE_VERSION=3.10.5
+FROM python:${BASE_IMAGE_VERSION}
 
 RUN curl -sL https://deb.nodesource.com/setup_14.x | bash - && \
   apt-get upgrade -y && \
