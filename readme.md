@@ -1,6 +1,7 @@
 # A Docker image for single-use JupyterLab
 
 ### Build the image
+Before building the image, be sure to allocate at least 1GB of memory per CPU to your Docker for Desktop virtual machine. E.g. If you allocate 6 CPU cores, then allocate 6GB of memory.
 ```shell
 $> docker build -t kernelpanek/jupyterlab .
 ```
