@@ -58,7 +58,7 @@ mistune==0.8.4
 mpmath==1.2.1
 nbconvert==6.5.0
 nbformat==5.4.0
-notebook==6.4.11
+notebook==6.4.12
 numba==0.55.2
 numexpr==2.8.1
 numpy==1.22.4
@@ -81,7 +81,6 @@ ptyprocess==0.7.0
 py==1.11.0
 pyasn1==0.4.8
 pyasn1-modules==0.2.8
-pycrypto==2.6.1
 pycryptodome==3.14.1
 PyGithub==1.55
 Pygments==2.12.0
