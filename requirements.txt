@@ -116,7 +116,7 @@ tox==3.25.0
 traitlets==5.2.1.post0
 tzlocal==4.2
 ujson>=5.4.0
-untangle==1.1.1
+untangle==1.2.1
 urllib3==1.26.9
 urwid==2.1.2
 vega==3.6.0
