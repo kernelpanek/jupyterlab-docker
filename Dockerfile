@@ -38,8 +38,7 @@ RUN jupyter labextension install \
     @finos/perspective-jupyterlab@2.2.1 \
     @jupyterlab/git@0.44.0 \
     @krassowski/jupyterlab-lsp@3.10.2 \
-    jupyter-threejs@2.3.0 \
-    dask-labextension@5.2.0
+    jupyter-threejs@2.3.0
 
 COPY bin/entrypoint.sh /usr/local/bin/
 COPY config/ /root/.jupyter/
