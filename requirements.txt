@@ -9,7 +9,7 @@ cloudpickle==2.1.0
 crayons==0.4.0
 cufflinks==0.17.3
 dask[complete]==2022.5.2
-dask-labextension==5.2.0
+dask-labextension==6.2.0
 dill==0.3.5.1
 docker
 docutils==0.18.1
