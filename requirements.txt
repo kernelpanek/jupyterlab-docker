@@ -1,7 +1,7 @@
 -i https://pypi.python.org/simple
 altair
 black
-bokeh==2.4.3
+bokeh
 boto3
 bottleneck==1.3.4
 colorama==0.4.4
