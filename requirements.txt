@@ -57,7 +57,6 @@ numexpr==2.8.1
 numpy==1.26.4
 oauthlib>=3.2.2
 pandas==1.4.2
-panel==0.13.1
 paramiko>=3.4.0
 pbr==5.9.0
 pep8==1.7.1
