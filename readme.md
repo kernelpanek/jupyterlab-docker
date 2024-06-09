@@ -1,15 +1,11 @@
 # A Docker image for a single-user JupyterLab environment
+### Install the image
+From [Docker Hub](https://hub.docker.com/r/eadade51afcc/jupyterlab-docker)
 
 ### Build the image
-Before building the image, be sure to allocate at least 1GB of memory per CPU core allocated to your Docker for Desktop virtual 
-machine. E.g. If you allocate 6 CPU cores, then allocate 6GB of memory.
 ```shell
 $> docker build -t kernelpanek/jupyterlab .
 ```
-The build process has several long-running steps for compiling dependencies and tools. The approximate time to build with 
-Docker allocated 6 cores/6GB memory is 20 minutes. It's also worth noting that the finished image will be nearly 5GB in 
-size. This is because the `build-essential` package and other build tools are kept for building other Python modules that 
-you add using your own `requirements.txt` file.
 
 ### Run the container
 In your terminal, navigate to your notebooks directory if you have one.
