@@ -27,7 +27,7 @@ html5lib==1.1
 hvac==0.11.2
 hvplot==0.8.0
 idna>=3.7
-imagesize==1.3.0
+imagesize==1.4.1
 ipaddr==2.2.0
 ipaddress==1.0.23
 ipykernel==6.13.0
