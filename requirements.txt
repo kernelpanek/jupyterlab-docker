@@ -97,7 +97,7 @@ requests-oauthlib
 requests-toolbelt
 rsa==4.9
 ruamel.yaml==0.17.21
-scikit-learn==1.1.1
+scikit-learn==1.5.0
 simplejson==3.17.6
 six==1.16.0
 smmap2==3.0.1
