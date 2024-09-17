@@ -123,7 +123,7 @@ voluptuous==0.13.1
 wcwidth==0.2.5
 webencodings==0.5.1
 websocket-client==1.8.0
-wfuzz==3.1.0
+wfuzz
 Whoosh==2.7.4
 widgetsnbextension==3.6.0
 xlrd==2.0.1
