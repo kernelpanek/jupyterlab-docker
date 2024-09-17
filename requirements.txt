@@ -42,7 +42,7 @@ jsonpatch==1.32
 jsonpickle==2.2.0
 jupyter-contrib-core
 jupyter-contrib-nbextensions
-jupyterlab==3.6.7
+jupyterlab==3.6.8
 jupyterlab_git==0.44.0
 jupyterlab_latex
 jupyterlab-lsp==4.3.0
