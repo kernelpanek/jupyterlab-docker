@@ -96,7 +96,7 @@ requests-toolbelt
 rsa==4.9
 ruamel.yaml==0.17.21
 scikit-learn==1.5.1
-simplejson==3.17.6
+simplejson==3.19.3
 six==1.16.0
 smmap2==3.0.1
 snowballstemmer==2.2.0
