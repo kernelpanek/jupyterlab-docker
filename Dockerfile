@@ -30,7 +30,7 @@ RUN jupyter labextension install \
     @krassowski/jupyterlab-lsp@3.10.2 \
     jupyter-threejs@2.3.0
 
-FROM python:${BASE_IMAGE_VERSION}
+FROM python:${BASE_IMAGE_VERSION}-slim
 
 COPY --from=build /usr/local/bin/ /usr/local/bin/
 COPY --from=build /usr/local/lib/python3.10/site-packages/ /usr/local/lib/python3.10/site-packages/
