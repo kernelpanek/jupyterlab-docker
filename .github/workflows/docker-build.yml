@@ -31,7 +31,7 @@ jobs:
         context: .
         push: true
         platforms: linux/amd64
-        tags: ${{ secrets.DOCKER_USERNAME }}/jupyterlab-docker:latest
+        tags: ${{ secrets.DOCKER_USERNAME }}/jupyterlab-docker:1.0.0-x86_64
   build-arm:
     runs-on: [self-hosted, ARM64]
 
@@ -54,4 +54,4 @@ jobs:
         context: .
         push: true
         platforms: linux/arm64
-        tags: ${{ secrets.DOCKER_USERNAME }}/jupyterlab-docker:latest
+        tags: ${{ secrets.DOCKER_USERNAME }}/jupyterlab-docker:1.0.0-arm64
