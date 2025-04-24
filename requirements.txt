@@ -45,7 +45,7 @@ jupyter-contrib-nbextensions
 jupyterlab==3.6.8
 jupyterlab_git==0.44.0
 jupyterlab_latex
-jupyterlab-lsp==4.3.0
+jupyterlab-lsp==5.1.0
 jupyterthemes
 kubernetes
 matplotlib==3.5.2
